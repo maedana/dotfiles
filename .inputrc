@@ -1,0 +1,9 @@
+# vi スタイルの編集を選択する:
+set editing-mode vi
+
+# 一行だけを使って編集する:
+set horizontal-scroll-mode on
+
+# ヒストリバッファ編集でアスタリスクを表示:
+set mark-modified-lines on
+

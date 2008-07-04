@@ -1,0 +1,11 @@
+#export PYTHONPATH=$HOME/project/project/score/svn/trunk/djangosite/
+export PYTHONSTARTUP=$HOME/.pythonrc.py
+#export PERL5LIB=$HOME/root/lib/perl5/5.8.8:$HOME/root/lib/perl5/site_perl/5.8.8
+#export PATH=$HOME/root/bin:$PATH
+export LD_LIBRARY_PATH=/opt/subversion/lib:/opt/neon/lib
+#export DJANGO_SETTINGS_MODULE=djangosite.settings
+#export RUBYLIB=$HOME/root/local/lib/site_ruby/1.8
+GEM_HOME=/usr/local/lib/ruby/gems/1.8
+PATH=/usr/local/bin:$PATH
+export PATH=$GEM_HOME/bin:$PATH
+export GEM_PATH=/usr/lib/ruby/gems/1.8
