@@ -78,9 +78,8 @@ set ruler
 set showcmd
 
 "==<color>====================================================================
-"colorscheme candy
-"autocmd VimEnter * :GuiColorScheme candy
-autocmd VimEnter * :GuiColorScheme xoria256
+colorscheme xoria256
+"autocmd VimEnter * :GuiColorScheme xoria256
 
 set listchars=tab:>_
 "set list

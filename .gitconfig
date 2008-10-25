@@ -1,2 +1,13 @@
 [user]
-	email = maeda.na@gmail.com
+    name = maedana
+    email = maeda.na@gmail.com
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+
+[alias]
+    co = checkout
+    st = status
+    ci = commit -a
+    di = diff

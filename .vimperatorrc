@@ -1,0 +1,46 @@
+" 1.2 (created: 2008/08/16 18:51:52)
+" ============================================================ 
+" Mappings
+" ============================================================ 
+
+noremap j 5j
+noremap k 5k
+"noremap <C-Space> <esc>
+noremap h <C-p>
+noremap l <C-n>
+noremap f F
+noremap F f
+
+"cmap <C-Space> <esc>
+
+" ============================================================ 
+" Cut & Copy & Pate, select all , and Redo
+" ============================================================ 
+
+inoremap <C-a> <C-v><C-a>
+inoremap <C-z> <C-v><C-z>
+inoremap <C-x> <C-x><C-x>
+inoremap <C-c> <C-v><C-c>
+inoremap <C-v> <C-v><C-v>
+
+inoremap <C-a> <C-v><C-a>
+inoremap <C-z> <C-v><C-z>
+inoremap <C-x> <C-x><C-x>
+inoremap <C-c> <C-v><C-c>
+inoremap <C-v> <C-v><C-v>
+
+" ============================================================ 
+" Options
+" ============================================================ 
+set guioptions=b
+set wildoptions=auto
+set newtab=all
+set complete=sl
+
+" ============================================================ 
+" Abbreviations
+" ============================================================ 
+
+source! ~/.vimperatorrc.local
+
+" vim: set ft=vimperator:
