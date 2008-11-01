@@ -3,6 +3,8 @@
 set nocompatible
 " バックアップを作らない
 set nobackup
+" swpファイルを作成するディレクトリを固定
+set directory=/home/maedana/tmp
 " vim開始時の挨拶を表示しない
 set shortmess+=I
 " 行番号表示
@@ -31,10 +33,10 @@ vnoremap <expr> h col('.') == 1 && foldlevel(line('.')) > 0 ? 'zcgv' : 'h'
 " 折畳上で l を押すと選択範囲に含まれる折畳を開く。
 vnoremap <expr> l foldclosed(line('.')) != -1 ? 'zogv0' : 'l'
 
-"helptags ~/.vim/doc
-"set tags=~/tags
+" <Leader>及び<LocalLeader>をデフォルトの\からspaceにする
+let mapleader = ' '
+let maplocalleader = ' '
 
-" ソースコードハイライト
 syntax on
 
 filetype plugin on
