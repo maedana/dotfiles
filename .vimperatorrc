@@ -37,6 +37,15 @@ set wildoptions=auto
 set newtab=all
 set complete=sl
 
+" ============================================================
+" Plugins
+" ============================================================
+autocmd LocationChange .* :fmapc
+js <<EOF
+autocommands.add('LocationChange',/fastladder\.com\/reader\//,
+          'js plugins.feedKey.setup("j k s a p o v c <Space> <S-Space> z Z < > q w b i".split(/ +/));');
+EOF
+
 " ============================================================ 
 " Abbreviations
 " ============================================================ 
