@@ -193,5 +193,7 @@ if v:version >= 700
 endif
 
 "YankRing.vim (ver3.0) via http://www.graphact.com/memo/2007/12/13/168
-:set viminfo+=!
+set viminfo+=!
 
+"hatena.vim
+let g:hatena_user='maedana'
