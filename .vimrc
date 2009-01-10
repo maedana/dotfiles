@@ -84,7 +84,7 @@ colorscheme xoria256
 "autocmd VimEnter * :GuiColorScheme xoria256
 
 set listchars=tab:>_
-"set list
+set list
 "highlight SpecialKey guifg=#555555
 "
 highlight Pmenu      ctermbg=8  guibg=#808080
@@ -197,3 +197,15 @@ set viminfo+=!
 
 "hatena.vim
 let g:hatena_user='maedana'
+
+"==<vim-reading#04より>=================================================================
+highlight ZenkakuSpace ctermbg=6
+match ZenkakuSpace /\s\+$\|　/
+
+set whichwrap=b,s,h,l,<,>,[,]
+
+" insert timestamp
+nmap tw :exe "normal! i" . strftime("%Y-%m-%d\T%H:%M:%S+09:00")<CR>
+
+" バッファ名をGNU ScreenのScreen名にする
+autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | silent! exe '!echo -n "k%\\"' | endif
