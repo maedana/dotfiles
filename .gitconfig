@@ -11,3 +11,6 @@
     st = status
     ci = commit -a
     di = diff
+[github]
+	user = maedana
+	token = ed57720024f2df3b1409ed8099275fca
