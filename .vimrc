@@ -15,7 +15,7 @@ set cmdheight=1
 set hidden
 " コマンド保存数
 set history=100
-" backspaceキーを使えるようにする 
+" backspaceキーを使えるようにする
 set backspace=indent,eol,start
 " mouse mode
 set mouse=a
@@ -23,6 +23,7 @@ set ttymouse=xterm2
 " folding
 set foldmethod=indent
 set foldlevel=1
+set ambiwidth=double
 " via http://d.hatena.ne.jp/ns9tks/20080318/1205851539
 " 行頭で h を押すと折畳を閉じる。
 nnoremap <expr> h col('.') == 1 && foldlevel(line('.')) > 0 ? 'zc' : 'h'
