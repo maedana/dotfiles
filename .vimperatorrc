@@ -1,55 +1,142 @@
-" 1.2 (created: 2008/08/16 18:51:52)
+" 2.0 (created: 2009/05/31 21:51:52)
+" ======================================================================
+" Prefs
+" ======================================================================
+" caretのサイズ
+"set! ui.caretWidth=10
+
+" undo保持数
+set! browser.sessionstore.max_tabs_undo=30
+
+" タブの閉じるボタン非表示
+set! browser.tabs.closeButtons=2
+
+" ページのアクセスキーを無効化
+set! ui.key.generalAccessKey=0
+
+
+" Gmail/LDR/Fastladder/OpenFL/はてブでは新規タブをバックグラウンドで開く
+autocmd LocationChange (?!https?://(mail\.google\.com\/(mail|a)\/|(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0\:3000)/reader/|b\.hatena\.ne\.jp/revivre)) :set! browser.tabs.loadDivertedInBackground=false
+autocmd LocationChange https?://(mail\.google\.com\/(mail|a)\/|(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0\:3000)/reader/|b\.hatena\.ne\.jp/revivre) :set! browser.tabs.loadDivertedInBackground=true
+
 " ============================================================
 " Mappings
 " ============================================================
+"j/kの移動量を調節
+noremap j 10<C-e>
+noremap k 10<C-y>
 
-noremap j 5j
-noremap k 5k
-"noremap <C-Space> <esc>
+"h/lでタブ移動
 noremap h <C-p>
 noremap l <C-n>
+
+"Shift+左矢印/Shift+右矢印でタブ位置変更
+map <S-Right> :tabmove! +1<CR>
+map <S-Left> :tabmove! -1<CR>
+
+"検索バーにフォーカス
+map <C-k> <C-v><C-k>
+
+"ロケーションバーにフォーカス
+map <C-l> <A-d>
+
+" URL中の数字を++/--
+noremap ++ <C-a>
+noremap -- <C-x>
+
 noremap f F
 noremap F f
 
-"cmap <C-Space> <esc>
+"各種バー表示をトグル
+noremap <C-1> :set guioptions=r<cr>
+noremap <C-2> :set guioptions=Br<cr>
+noremap <C-3> :set guioptions=BmTr<cr>
 
 " ============================================================
-" Cut & Copy & Pate, select all , and Redo
+" OSのキーバインドを再現 
 " ============================================================
+noremap <C-a> <C-v><C-a>
+noremap <C-c> <C-v><C-c>
 
 inoremap <C-a> <C-v><C-a>
-inoremap <C-z> <C-v><C-z>
-inoremap <C-x> <C-x><C-x>
 inoremap <C-c> <C-v><C-c>
 inoremap <C-v> <C-v><C-v>
+inoremap <C-x> <C-v><C-x>
+inoremap <C-z> <C-v><C-z>
+inoremap <C-Space> <C-v><C-Space>
 
-inoremap <C-a> <C-v><C-a>
-inoremap <C-z> <C-v><C-z>
-inoremap <C-x> <C-x><C-x>
-inoremap <C-c> <C-v><C-c>
-inoremap <C-v> <C-v><C-v>
+cnoremap <C-a> <C-v><C-a>
+cnoremap <C-c> <C-v><C-c>
+cnoremap <C-v> <C-v><C-v>
+cnoremap <C-x> <C-v><C-x>
+cnoremap <C-z> <C-v><C-z>
 
 " ============================================================
 " Options
 " ============================================================
-set guioptions=mnrT
+" ex mode でインクリメント補完
 set wildoptions=auto
-set newtab=all
-set complete=sl
+
+" :[tab]open の補完対象と順番
+set complete=Slb
+
+" menubar, toolbar 右のスクロールバーを表示
+set guioptions=r
+
+" 常にタブを表示
+set showtabline=2
+
+" リンクのURIをステータスラインに表示
+set showstatuslinks=1
+
+" 新規ウィンドウの処理(1:いつも新しいタブで開く)
+set popups=1
+
+" ページロード時にテキストボックスにフォーカスするのを防ぐ
+set focuscontent
+
+" 詳細表示を5行に(最大値=9)
+set verbose=5
+
+" Beep設定
+set visualbell
+hi Bell opacity: .5;
 
 " ============================================================
 " Plugins
 " ============================================================
+" ime_controller.js
+let g:ex_ime_mode = "inactive"
+let g:textarea_ime_mode = "inactive"
+
+" cahr-hints-mod2.js
+let g:hints io="IO"
+let g:hintchars="HJKLASDFGYUIOPQWERTNMZXCVB"
+
+" lookupDictionary.js
+map e :eijiro<Space>
+
+" FIXME 動作しなかった
+"" maine_coon.js
+"set mainecoon=am
+"noremap <C-4> :set mainecoon=amc<cr>
+"noremap <C-5> :set mainecoon=am<cr>
+"noremap <C-6> :set mainecoon=m<cr>
+
+" feedSomeKeys_2.js
 autocmd LocationChange .* :fmapc
-js <<EOF
-autocommands.add('LocationChange',/fastladder\.com\/reader\//,
-          'js plugins.feedKey.setup("j k s a p o v c <Space> <S-Space> z Z < > q w b i".split(/ +/));');
-EOF
+" LDR/Fastladder/OpenFL
+autocmd LocationChange ^http://(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0\:3000)/reader/ :fmap j k s a p v c z Z b i,ie r < > o,vj J,<Space> K,<S-Space> q w g u T
 
-" ============================================================
-" Abbreviations
-" ============================================================
-
-source! ~/.vimperatorrc.local
+" ======================================================================
+" colorscheme
+" ======================================================================
+colorscheme BrewBlue
+style -name tab-style-fix chrome://* <<EOM
+.tab-text-shadow,
+    .tabs-newtab-button {
+          display: none !important;
+    }
+EOM
 
 " vim: set ft=vimperator:
