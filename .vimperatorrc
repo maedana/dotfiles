@@ -78,7 +78,7 @@ cnoremap <C-z> <C-v><C-z>
 set wildoptions=auto
 
 " :[tab]open の補完対象と順番
-set complete=Slb
+set complete=l
 
 " menubar, toolbar 右のスクロールバーを表示
 set guioptions=r
