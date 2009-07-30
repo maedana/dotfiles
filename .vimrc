@@ -179,8 +179,8 @@ set showmatch
 "==rails.vim
 let g:rails_level = 4
 let g:rails_defalut_database = 'sqlite3'
-let g:rails_syntax=1
-let g:rails_gnu_screen=1
+let g:rails_syntax = 1
+let g:rails_gnu_screen = 1
 
 "==surroud.vim
 autocmd Syntax htmldjango let g:surround_37 = "{% \r %}"
@@ -198,6 +198,9 @@ set viminfo+=!
 
 "hatena.vim
 let g:hatena_user='maedana'
+
+"neocomplecache.vim
+let g:NeoComplCache_EnableAtStartup = 1
 
 "==<vim-reading#04より>=================================================================
 highlight ZenkakuSpace ctermbg=6
