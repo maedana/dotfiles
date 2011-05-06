@@ -1,4 +1,4 @@
-" 2.0 (created: 2009/05/31 21:51:52)
+" 3.0 (updated: 2011/05/06 21:51:52)
 " ======================================================================
 " Prefs
 " ======================================================================
@@ -48,12 +48,12 @@ noremap f F
 noremap F f
 
 "各種バー表示をトグル
-noremap <C-1> :set guioptions=r<cr>
-noremap <C-2> :set guioptions=Br<cr>
-noremap <C-3> :set guioptions=BmTr<cr>
+noremap <C-1> :set toolbars=nonavigation,nomenu,noaddons,nobookmarks<cr>
+noremap <C-2> :set toolbars=nonavigation,nomenu,noaddons,bookmarks<cr>
+noremap <C-3> :set toolbars=navigation,menu,addons,bookmarks<cr>
 
 " ============================================================
-" OSのキーバインドを再現 
+" OSのキーバインドを再現
 " ============================================================
 noremap <C-a> <C-v><C-a>
 noremap <C-c> <C-v><C-c>
@@ -75,16 +75,10 @@ cnoremap <C-z> <C-v><C-z>
 " Options
 " ============================================================
 " ex mode でインクリメント補完
-set wildoptions=auto
+set autocomplete
 
 " :[tab]open の補完対象と順番
 set complete=l
-
-" menubar, toolbar 右のスクロールバーを表示
-set guioptions=r
-
-" 常にタブを表示
-set showtabline=2
 
 " リンクのURIをステータスラインに表示
 set showstatuslinks=1
