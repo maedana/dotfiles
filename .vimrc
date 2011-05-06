@@ -46,16 +46,19 @@ filetype indent on
 "==<tabkey>===================================================================
 set cindent
 set expandtab
+set softtabstop=2
+set shiftwidth=2
+set tabstop=2
 
-autocmd BufEnter * call SetTab()
-
-function! SetTab()
-  if &syntax == 'ruby' || &syntax == 'python' || &syntax == 'html' || &syntax == 'xhtml' || &syntax == 'css' || &syntax == 'eruby' || &syntax == 'yaml' || &syntax == 'vim' || &syntax == 'haml' || &syntax == 'sass' || &syntax == 'xml'
-    execute 'set softtabstop=2 | set shiftwidth=2 | set tabstop=2'
-  else
-    execute 'set softtabstop=4 | set shiftwidth=4 | set tabstop=4'
-  endif
-endfunction
+"autocmd BufEnter * call SetTab()
+"
+"function! SetTab()
+"  if &syntax == 'ruby' || &syntax == 'python' || &syntax == 'html' || &syntax == 'xhtml' || &syntax == 'css' || &syntax == 'eruby' || &syntax == 'yaml' || &syntax == 'vim' || &syntax == 'haml' || &syntax == 'sass' || &syntax == 'xml'
+"    execute 'set softtabstop=2 | set shiftwidth=2 | set tabstop=2'
+"  else
+"    execute 'set softtabstop=4 | set shiftwidth=4 | set tabstop=4'
+"  endif
+"endfunction
 
 "==<search>===================================================================
 " .が何か一文字という意味になる
