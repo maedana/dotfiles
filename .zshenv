@@ -6,3 +6,7 @@ export TERM=xterm-256color
 export PATH=$RUBY_HOME/bin:$VIM_HOME/bin:$PATH
 export GISTY_DIR=$HOME/local/repos/public/gisty
 export EDITOR=/usr/local/vim/bin/vim
+
+## rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
