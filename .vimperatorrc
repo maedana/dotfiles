@@ -60,14 +60,12 @@ noremap <C-c> <C-v><C-c>
 
 inoremap <C-a> <C-v><C-a>
 inoremap <C-c> <C-v><C-c>
-inoremap <C-v> <C-v><C-v>
 inoremap <C-x> <C-v><C-x>
 inoremap <C-z> <C-v><C-z>
 inoremap <C-Space> <C-v><C-Space>
 
 cnoremap <C-a> <C-v><C-a>
 cnoremap <C-c> <C-v><C-c>
-cnoremap <C-v> <C-v><C-v>
 cnoremap <C-x> <C-v><C-x>
 cnoremap <C-z> <C-v><C-z>
 
@@ -84,7 +82,7 @@ set complete=l
 set showstatuslinks=1
 
 " 新規ウィンドウの処理(1:いつも新しいタブで開く)
-set popups=1
+set popups=tab
 
 " ページロード時にテキストボックスにフォーカスするのを防ぐ
 set focuscontent
@@ -125,12 +123,12 @@ autocmd LocationChange ^http://(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0
 " ======================================================================
 " colorscheme
 " ======================================================================
-colorscheme BrewBlue
-style -name tab-style-fix chrome://* <<EOM
-.tab-text-shadow,
-    .tabs-newtab-button {
-          display: none !important;
-    }
-EOM
+"colorscheme BrewBlue
+"style -name tab-style-fix chrome://* <<EOM
+".tab-text-shadow,
+"    .tabs-newtab-button {
+"          display: none !important;
+"    }
+"EOM
 
 " vim: set ft=vimperator:
