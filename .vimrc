@@ -40,6 +40,25 @@ let maplocalleader = ' '
 
 syntax on
 
+"==<vundle>===================================================================
+"see http://vim-users.jp/2011/04/hack215/
+filetype off
+
+set rtp+=~/.vim/vundle.git/
+call vundle#rc()
+
+" vim-scripts repos
+" Bundle 'rails.vim'
+" Bundle 'project.vim'
+Bundle 'yanktmp.vim'
+Bundle 'YankRing.vim'
+Bundle 'neocomplcache'
+
+" original repos on github
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rails'
+Bundle 'sakuraiyuta/commentout.vim'
+
 filetype plugin on
 filetype indent on
 
@@ -123,48 +142,6 @@ if has('iconv')
   unlet s:enc_jis
 endif
 
-autocmd FileType cvs :set fileencoding=euc-jp
-autocmd FileType svn :set fileencoding=utf-8
-
-"==<svk>======================================================================
-au BufNewFile,BufRead svk-commit*.tmp setf svk
-
-"==<comlete>==================================================================
-" omni complete
-"autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
-autocmd FileType html :set filetype=xhtml
-autocmd Filetype html :set omnifunc=htmlcomplete#CompleteTags
-
-"Rubyのオムニ補完を設定(ft-ruby-omni)
-"let g:rubycomplete_buffer_loading = 1
-"let g:rubycomplete_classes_in_global = 1
-"let g:rubycomplete_rails = 1
-
-" omni completeをTabキーで出来るようにする
-function! InsertTabWrapper()
-  if pumvisible()
-    return "\<C-N>"
-  endif
-
-  let col = col('.') - 1
-  if !col || getline('.')[col - 1] !~ '\k\|<\|/'
-    return "\<TAB>"
-  elseif &omnifunc == ''
-    return "\<C-P>"
-  else
-    return "\<C-X>\<C-O>"
-  endif
-endfunction
-
-inoremap <TAB> <C-R>=InsertTabWrapper()<CR>
-
-"==<head comment>=============================================================
-"iab papp <ESC>:r ~/.vim/templates/perl_application.pl<CR>
-"iab ppkg <ESC>:r ~/.vim/templates/perl_package.pl<CR>
-"iab pcls <ESC>:r ~/.vim/templates/perl_class.pl<CR>
-"iab psub <ESC>:r ~/.vim/templates/perl_subroutine.pl<CR>
-
 "==<buffer>===================================================================
 map <LEFT> :bp!<CR>
 map <RIGHT> :bn!<CR>
@@ -185,9 +162,6 @@ let g:rails_defalut_database = 'sqlite3'
 let g:rails_syntax = 1
 let g:rails_gnu_screen = 1
 
-"==surroud.vim
-autocmd Syntax htmldjango let g:surround_37 = "{% \r %}"
-
 "==yanktmp.vim(via id:secondlife
 if v:version >= 700 
   let g:yanktmp_file = $HOME . '/.vimyanktmp'
@@ -198,9 +172,6 @@ endif
 
 "YankRing.vim (ver3.0) via http://www.graphact.com/memo/2007/12/13/168
 set viminfo+=!
-
-"hatena.vim
-let g:hatena_user='maedana'
 
 "neocomplecache.vim
 let g:NeoComplCache_EnableAtStartup = 1
