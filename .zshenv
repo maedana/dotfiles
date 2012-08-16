@@ -1,12 +1,13 @@
-RUBY_HOME=/usr/local/ruby
-VIM_HOME=/usr/local/vim
 export RAILS_ENV=development
-export GIT_EDITOR=$VIM_HOME/bin/vim
 export TERM=xterm-256color
-export PATH=$RUBY_HOME/bin:$VIM_HOME/bin:$PATH
-export GISTY_DIR=$HOME/local/repos/public/gisty
-export EDITOR=/usr/local/vim/bin/vim
+export EDITOR=/usr/bin/vim
+export GIT_EDITOR=/usr/bin/vim
+export LAUNCHY_BROWSER=/usr/bin/chromium-browser
+# for next-cms-development
+export APP_HOST_NAME=next-cms.dev
 
 ## rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
