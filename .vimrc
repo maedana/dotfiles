@@ -142,6 +142,23 @@ if has('iconv')
   unlet s:enc_jis
 endif
 
+" 補完をTabキーで出来るようにする
+function! InsertTabWrapper()
+  if pumvisible()
+    return "\<C-N>"
+  endif
+
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k\|<\|/'
+    return "\<TAB>"
+  elseif &omnifunc == ''
+    return "\<C-P>"
+  else
+    return "\<C-X>\<C-O>"
+  endif
+endfunction
+inoremap <TAB> <C-R>=InsertTabWrapper()<CR>
+
 "==<buffer>===================================================================
 map <LEFT> :bp!<CR>
 map <RIGHT> :bn!<CR>
