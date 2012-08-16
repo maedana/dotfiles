@@ -174,7 +174,7 @@ endif
 set viminfo+=!
 
 "neocomplecache.vim
-let g:NeoComplCache_EnableAtStartup = 1
+let g:neocomplcache_enable_at_startup = 1
 
 "==<vim-reading#04より>=================================================================
 highlight ZenkakuSpace ctermbg=6
