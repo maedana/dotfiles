@@ -58,6 +58,8 @@ Bundle 'neocomplcache'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'sakuraiyuta/commentout.vim'
+Bundle 'motemen/hatena-vim'
+Bundle 'kchmck/vim-coffee-script'
 
 filetype plugin on
 filetype indent on
@@ -72,7 +74,7 @@ set tabstop=2
 autocmd BufEnter * call SetTab()
 
 function! SetTab()
-  if &syntax == 'ruby' || &syntax == 'python' || &syntax == 'html' || &syntax == 'xhtml' || &syntax == 'css' || &syntax == 'eruby' || &syntax == 'yaml' || &syntax == 'vim' || &syntax == 'haml' || &syntax == 'sass' || &syntax == 'xml' || &syntax == 'javascript.jquery'
+  if &syntax == 'ruby' || &syntax == 'python' || &syntax == 'html' || &syntax == 'xhtml' || &syntax == 'css' || &syntax == 'eruby' || &syntax == 'yaml' || &syntax == 'vim' || &syntax == 'haml' || &syntax == 'sass' || &syntax == 'xml' || &syntax == 'javascript.jquery' || &syntax == 'coffee'
     execute 'set softtabstop=2 | set shiftwidth=2 | set tabstop=2'
   else
     execute 'set softtabstop=4 | set shiftwidth=4 | set tabstop=4'
