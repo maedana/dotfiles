@@ -14,7 +14,7 @@ set cmdheight=1
 " バッファ放棄時にhidden状態になる
 set hidden
 " コマンド保存数
-set history=100
+set history=1000
 " backspaceキーを使えるようにする
 set backspace=indent,eol,start
 " mouse mode
