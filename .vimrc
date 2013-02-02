@@ -3,8 +3,8 @@
 set nocompatible
 " バックアップを作らない
 set nobackup
-" swpファイルを作成するディレクトリを固定
-set directory=/home/maedana/tmp
+" swpファイルを作らない
+set noswapfile
 " vim開始時の挨拶を表示しない
 set shortmess+=I
 " 行番号表示
