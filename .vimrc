@@ -201,9 +201,6 @@ match ZenkakuSpace /\s\+$\|　/
 
 set whichwrap=b,s,h,l,<,>,[,]
 
-" insert timestamp
-nmap tw :exe "normal! i" . strftime("%Y-%m-%d\T%H:%M:%S+09:00")<CR>
-
 " バッファ名をGNU ScreenのScreen名にする
 autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | silent! exe '!echo -n "k%\\"' | endif
 
