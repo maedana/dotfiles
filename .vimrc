@@ -61,6 +61,8 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle 'sakuraiyuta/commentout.vim'
 NeoBundle 'motemen/hatena-vim'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'thinca/vim-ref'
+NeoBundle 'taka84u9/vim-ref-ri', { 'depends': ['thinca/vim-ref'] }
 
 filetype plugin on
 filetype indent on
@@ -76,6 +78,12 @@ endif
 
 "neocomplecache.vim
 let g:neocomplcache_enable_at_startup = 1
+
+"----------------------------------------
+" vim-ref
+"----------------------------------------
+let g:ref_open                    = 'split'
+let g:ref_refe_cmd                = expand('~/.vim/ref/ruby-refm-1.9.3-dynamic-20120829/refe-1_9_3')
 
 "==<tabkey>===================================================================
 set cindent
