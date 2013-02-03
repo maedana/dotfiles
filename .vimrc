@@ -40,29 +40,42 @@ let maplocalleader = ' '
 
 syntax on
 
-"==<vundle>===================================================================
-"see http://vim-users.jp/2011/04/hack215/
+"==<NeoBundle>================================================================
+"see http://vim-users.jp/2011/10/hack238/
 filetype off
 
-set rtp+=~/.vim/vundle.git/
-call vundle#rc()
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+  call neobundle#rc(expand('~/.vim/bundle/'))
+endif
 
 " vim-scripts repos
-" Bundle 'rails.vim'
-" Bundle 'project.vim'
-Bundle 'yanktmp.vim'
-Bundle 'YankRing.vim'
-Bundle 'neocomplcache'
+NeoBundle 'yanktmp.vim'
 
 " original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails'
-Bundle 'sakuraiyuta/commentout.vim'
-Bundle 'motemen/hatena-vim'
-Bundle 'kchmck/vim-coffee-script'
+NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'sakuraiyuta/commentout.vim'
+NeoBundle 'motemen/hatena-vim'
+NeoBundle 'kchmck/vim-coffee-script'
 
 filetype plugin on
 filetype indent on
+
+"==<plugin>===================================================================
+"yanktmp.vim(via id:secondlife
+if v:version >= 700
+  let g:yanktmp_file = $HOME . '/.vimyanktmp'
+  map <silent> sy :call YanktmpYank()<CR>
+  map <silent> sp :call YanktmpPaste_p()<CR>
+  map <silent> sP :call YanktmpPaste_P()<CR>
+endif
+
+"neocomplecache.vim
+let g:neocomplcache_enable_at_startup = 1
 
 "==<tabkey>===================================================================
 set cindent
@@ -174,28 +187,7 @@ nnoremap k gk
 "==<pair>=====================================================================
 set showmatch
 
-"==<plugin>=================================================================
-"==rails.vim
-let g:rails_level = 4
-let g:rails_defalut_database = 'sqlite3'
-let g:rails_syntax = 1
-let g:rails_gnu_screen = 1
-
-"==yanktmp.vim(via id:secondlife
-if v:version >= 700 
-  let g:yanktmp_file = $HOME . '/.vimyanktmp'
-  map <silent> sy :call YanktmpYank()<CR>
-  map <silent> sp :call YanktmpPaste_p()<CR>
-  map <silent> sP :call YanktmpPaste_P()<CR>
-endif
-
-"YankRing.vim (ver3.0) via http://www.graphact.com/memo/2007/12/13/168
-set viminfo+=!
-
-"neocomplecache.vim
-let g:neocomplcache_enable_at_startup = 1
-
-"==<vim-reading#04より>=================================================================
+"==<vim-reading#04より>=======================================================
 highlight ZenkakuSpace ctermbg=6
 match ZenkakuSpace /\s\+$\|　/
 
