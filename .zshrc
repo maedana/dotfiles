@@ -142,62 +142,6 @@ cons25)
   ;;
 esac
 
-# set terminal title including current directory
-
-case "${TERM}" in
-kterm*|xterm*|screen)
-  chpwd () { echo -n "_`dirs`\\" }
-  preexec() {
-    # see [zsh-workers:13180]
-    # http://www.zsh.org/mla/workers/2000/msg03993.html
-    emulate -L zsh
-    local -a cmd; cmd=(${(z)2})
-    case $cmd[1] in
-      fg)
-        if (( $#cmd == 1 )); then
-          cmd=(builtin jobs -l %+)
-        else
-          cmd=(builtin jobs -l $cmd[2])
-        fi
-        ;;
-      %*) 
-        cmd=(builtin jobs -l $cmd[1])
-        ;;
-      cd)
-        if (( $#cmd == 2)); then
-          cmd[1]=$cmd[2]
-        fi
-        ;&
-      *)
-        echo -n "k$cmd[1]:t\\"
-        return
-        ;;
-    esac
-
-    local -A jt; jt=(${(kv)jobtexts})
-
-    $cmd >>(read num rest
-      cmd=(${(z)${(e):-\$jt$num}})
-      echo -n "k$cmd[1]:t\\") 2>/dev/null
-  }
-  precmd() {
-    echo -ne "\033]0;${USER}@${HOST%%.*}:${PWD}\007"
-  }
-  chpwd
-  export LSCOLORS=exfxcxdxbxegedabagacad
-  export LS_COLORS='di=36:ln=35:so=32:pi=33:ex=31:bd=46;36:cd=43;36:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-  zstyle ':completion:*' list-colors \
-    'di=36' 'ln=35' 'so=32' 'ex=31' 'bd=46;36' 'cd=43;36'
-    ;;  
-esac
-
-case "${TERM}" in
-kterm*|xterm*|screen)
-  precmd(){
-    screen -X title $(basename $(print -P "%~"))
-  }
-esac
-
 # right prompt
 autoload -Uz add-zsh-hook
 autoload -Uz vcs_info
