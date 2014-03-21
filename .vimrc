@@ -84,16 +84,6 @@ let g:neocomplcache_enable_at_startup = 1
 let g:ref_open                    = 'split'
 let g:ref_refe_cmd                = expand('~/.vim/ref/ruby-refm-1.9.3-dynamic-20120829/refe-1_9_3')
 
-"vim-quickrun
-""RSpec対応
-let g:quickrun_config = {}
-let g:quickrun_config._ = {'runner' : 'vimproc'}
-let g:quickrun_config['ruby.rspec'] = { 'command': 'rspec', 'cmdopt': 'bundle exec', 'exec': '%o %c %s' }
-augroup RSpec
-  autocmd!
-  autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
-augroup END
-
 "==<tabkey>===================================================================
 set cindent
 set expandtab
@@ -104,11 +94,7 @@ set tabstop=2
 autocmd BufEnter * call SetTab()
 
 function! SetTab()
-  if &syntax == 'ruby' || &syntax == 'python' || &syntax == 'html' || &syntax == 'xhtml' || &syntax == 'css' || &syntax == 'eruby' || &syntax == 'yaml' || &syntax == 'vim' || &syntax == 'haml' || &syntax == 'sass' || &syntax == 'xml' || &syntax == 'javascript.jquery' || &syntax == 'coffee'
-    execute 'set softtabstop=2 | set shiftwidth=2 | set tabstop=2'
-  else
-    execute 'set softtabstop=4 | set shiftwidth=4 | set tabstop=4'
-  endif
+  execute 'set softtabstop=2 | set shiftwidth=2 | set tabstop=2'
 endfunction
 
 "==<search>===================================================================
