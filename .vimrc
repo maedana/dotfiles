@@ -64,6 +64,9 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'taka84u9/vim-ref-ri', { 'depends': ['thinca/vim-ref'] }
 NeoBundle 'thinca/vim-quickrun', { 'depends': ['Shougo/vimproc'] }
+"see http://qiita.com/take/items/7bb67276c785e223069a
+NeoBundle 'tpope/vim-dispatch'
+NeoBundle 'thoughtbot/vim-rspec'
 
 filetype plugin on
 filetype indent on
@@ -83,6 +86,10 @@ let g:neocomplcache_enable_at_startup = 1
 "vim-ref
 let g:ref_open                    = 'split'
 let g:ref_refe_cmd                = expand('~/.vim/ref/ruby-refm-1.9.3-dynamic-20120829/refe-1_9_3')
+
+"vim-rspec
+"see http://qiita.com/take/items/7bb67276c785e223069a
+let g:rspec_command = "Dispatch bundle exec rspec {spec}%"
 
 "==<tabkey>===================================================================
 set cindent
