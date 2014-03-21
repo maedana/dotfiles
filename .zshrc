@@ -231,3 +231,6 @@ RPROMPT="%1(v|%F{green}%1v%f|) [%20<..<%~]"
 
 # for rbenv
 eval "$(rbenv init -)"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
