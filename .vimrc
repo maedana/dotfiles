@@ -89,7 +89,7 @@ let g:ref_refe_cmd                = expand('~/.vim/ref/ruby-refm-1.9.3-dynamic-2
 
 "vim-rspec
 "see http://qiita.com/take/items/7bb67276c785e223069a
-let g:rspec_command = "Dispatch bundle exec rspec {spec}%"
+let g:rspec_command = "Dispatch bundle exec rspec {spec}"
 
 "==<tabkey>===================================================================
 set cindent
