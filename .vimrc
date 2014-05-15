@@ -64,6 +64,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'taka84u9/vim-ref-ri', { 'depends': ['thinca/vim-ref'] }
 NeoBundle 'thinca/vim-quickrun', { 'depends': ['Shougo/vimproc'] }
+NeoBundle 'kannokanno/previm'
 "see http://qiita.com/take/items/7bb67276c785e223069a
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'thoughtbot/vim-rspec'
@@ -90,6 +91,14 @@ let g:ref_refe_cmd                = expand('~/.vim/ref/ruby-refm-1.9.3-dynamic-2
 "vim-rspec
 "see http://qiita.com/take/items/7bb67276c785e223069a
 let g:rspec_command = "Dispatch bundle exec rspec {spec}"
+
+"previm
+"see https://github.com/kannokanno/previm
+augroup PrevimSettings
+  autocmd!
+  autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+augroup END
+let g:previm_open_cmd = "google-chrome"
 
 "==<tabkey>===================================================================
 set cindent
