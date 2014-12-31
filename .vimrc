@@ -46,7 +46,9 @@ filetype off
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#rc(expand('~/.vim/bundle/'))
+  call neobundle#begin(expand('~/.vim/bundle/'))
+  NeoBundleFetch 'Shougo/neobundle.vim'
+  call neobundle#end()
 endif
 
 " vim-scripts repos
@@ -68,6 +70,7 @@ NeoBundle 'kannokanno/previm'
 "see http://qiita.com/take/items/7bb67276c785e223069a
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'thoughtbot/vim-rspec'
+NeoBundle 'vim-scripts/xoria256.vim'
 
 filetype plugin on
 filetype indent on
