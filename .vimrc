@@ -71,6 +71,7 @@ NeoBundle 'kannokanno/previm'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 'vim-scripts/xoria256.vim'
+NeoBundle 'thinca/vim-qfreplace'
 
 filetype plugin on
 filetype indent on
