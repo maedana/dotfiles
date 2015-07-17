@@ -34,6 +34,13 @@ vnoremap <expr> h col('.') == 1 && foldlevel(line('.')) > 0 ? 'zcgv' : 'h'
 " 折畳上で l を押すと選択範囲に含まれる折畳を開く。
 vnoremap <expr> l foldclosed(line('.')) != -1 ? 'zogv0' : 'l'
 
+" grep設定
+" agがあれば使う
+if executable('ag')
+  set grepprg=ag\ --nogroup\ -iS
+  set grepformat=%f:%l:%m
+endif
+
 " <Leader>及び<LocalLeader>をデフォルトの\からspaceにする
 let mapleader = ' '
 let maplocalleader = ' '
