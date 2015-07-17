@@ -68,6 +68,7 @@ NeoBundle 'kannokanno/previm'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'vim-scripts/xoria256.vim'
 NeoBundle 'thinca/vim-qfreplace'
+NeoBundle 'Shougo/unite.vim'
 
 filetype plugin on
 filetype indent on
@@ -91,6 +92,30 @@ augroup PrevimSettings
   autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
 let g:previm_open_cmd = "google-chrome"
+
+"unite
+"see http://qiita.com/wadako111/items/5eb8e30aca1737ba6ba5
+let g:unite_enable_start_insert = 1
+let g:unite_enable_split_vertically = 0
+let g:unite_winwidth = 40
+nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
+nnoremap <silent> ,um :<C-u>Unite  file_mru <CR>
+nnoremap <silent> ,urc :<C-u>Unite file_rec/async:app/controllers/ <CR>
+nnoremap <silent> ,urfc :<C-u>Unite file file/new -input=app/controllers/ <CR>
+nnoremap <silent> ,urm :<C-u>Unite file_rec/async:app/models/ <CR>
+nnoremap <silent> ,urfm :<C-u>Unite file file/new -input=app/models/ <CR>
+nnoremap <silent> ,urv :<C-u>Unite file_rec/async:app/views/ <CR>
+nnoremap <silent> ,urfv :<C-u>Unite file file/new -input=app/views/ <CR>
+nnoremap <silent> ,urs :<C-u>Unite file_rec/async:app/assets/stylesheets/ <CR>
+nnoremap <silent> ,urfs :<C-u>Unite file file/new -input=app/assets/stylesheets/ <CR>
+nnoremap <silent> ,urj :<C-u>Unite file_rec/async:app/assets/javascripts/ <CR>
+nnoremap <silent> ,urfj :<C-u>Unite file file/new -input=app/assets/javascripts/ <CR>
+nnoremap <silent> ,uro :<C-u>Unite file_rec/async:config/ <CR>
+nnoremap <silent> ,urfo :<C-u>Unite file file/new -input=config/ <CR>
+nnoremap <silent> ,url :<C-u>Unite file_rec/async:lib/ <CR>
+nnoremap <silent> ,urfl :<C-u>Unite file file/new -input=lib/ <CR>
+nnoremap <silent> ,urr :<C-u>Unite file_rec/async:spec/ <CR>
+nnoremap <silent> ,urfr :<C-u>Unite file file/new -input=spec/ <CR>
 
 "==<tabkey>===================================================================
 set cindent
