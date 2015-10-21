@@ -37,7 +37,7 @@ vnoremap <expr> l foldclosed(line('.')) != -1 ? 'zogv0' : 'l'
 " grep設定
 " agがあれば使う
 if executable('ag')
-  set grepprg=ag\ --nogroup\ -iS
+  set grepprg=ag\ --nogroup
   set grepformat=%f:%l:%m
 endif
 
@@ -62,8 +62,10 @@ endif
 NeoBundle 'yanktmp.vim'
 
 " original repos on github
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-rails'
@@ -75,7 +77,7 @@ NeoBundle 'kannokanno/previm'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'vim-scripts/xoria256.vim'
 NeoBundle 'thinca/vim-qfreplace'
-NeoBundle 'Shougo/unite.vim'
+NeoBundle 'wakatime/vim-wakatime'
 
 filetype plugin on
 filetype indent on
