@@ -178,3 +178,5 @@ eval "$(rbenv init -)"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+[[ -s "/home/maedana/.gvm/scripts/gvm" ]] && source "/home/maedana/.gvm/scripts/gvm"
