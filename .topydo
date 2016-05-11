@@ -1,0 +1,5 @@
+; See https://github.com/bram85/topydo/wiki/Configuration for more info
+
+[topydo]
+filename                  = /home/maedana/Dropbox/todo/todo.txt
+archive_filename          = /home/maedana/Dropbox/todo/done.txt
