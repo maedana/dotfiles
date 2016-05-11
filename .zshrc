@@ -173,10 +173,14 @@ RPROMPT="%1(v|%F{green}%1v%f|) [%20<..<%~]"
 #
 [ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
 
-# for rbenv
-eval "$(rbenv init -)"
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+# for rbenv
+eval "$(rbenv init -)"
+
+# for gvm
 [[ -s "/home/maedana/.gvm/scripts/gvm" ]] && source "/home/maedana/.gvm/scripts/gvm"
+
+# for pyenv
+eval "$(pyenv init -)"
