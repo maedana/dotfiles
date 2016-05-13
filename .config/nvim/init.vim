@@ -47,23 +47,20 @@ let maplocalleader = ' '
 syntax on
 
 "==<NeoBundle>================================================================
-"see http://vim-users.jp/2011/10/hack238/
 filetype off
 
 if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#begin(expand('~/.vim/bundle/'))
-  NeoBundleFetch 'Shougo/neobundle.vim'
-  call neobundle#end()
+  set runtimepath+=~/.config/nvim/bundle/neobundle.vim/
 endif
 
+call neobundle#begin(expand('~/.config/nvim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
 " vim-scripts repos
 NeoBundle 'yanktmp.vim'
-
 " original repos on github
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neobundle.vim'
-"NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/deoplete.nvim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'tpope/vim-fugitive'
@@ -77,9 +74,11 @@ NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'vim-scripts/xoria256.vim'
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'wakatime/vim-wakatime'
+call neobundle#end()
 
 filetype plugin on
 filetype indent on
+NeoBundleCheck
 
 "==<plugin>===================================================================
 "yanktmp.vim(via id:secondlife
@@ -90,8 +89,7 @@ if v:version >= 700
   map <silent> sP :call YanktmpPaste_P()<CR>
 endif
 
-""neocomplecache.vim
-"let g:neocomplcache_enable_at_startup = 1
+let g:deoplete#enable_at_startup = 1 ":DeopleteEnable実行でもよい
 
 "previm
 "see https://github.com/kannokanno/previm
