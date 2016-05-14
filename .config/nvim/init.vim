@@ -62,18 +62,17 @@ NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/deoplete.nvim'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimproc'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'sakuraiyuta/commentout.vim'
 NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'thinca/vim-quickrun', { 'depends': ['Shougo/vimproc'] }
 NeoBundle 'kannokanno/previm'
 "see http://qiita.com/take/items/7bb67276c785e223069a
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'vim-scripts/xoria256.vim'
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'wakatime/vim-wakatime'
+NeoBundle 'scrooloose/syntastic.git'
 call neobundle#end()
 
 filetype plugin on
@@ -122,6 +121,10 @@ nnoremap <silent> ,url :<C-u>Unite file_rec/async:lib/ <CR>
 nnoremap <silent> ,urfl :<C-u>Unite file file/new -input=lib/ <CR>
 nnoremap <silent> ,urr :<C-u>Unite file_rec/async:spec/ <CR>
 nnoremap <silent> ,urfr :<C-u>Unite file file/new -input=spec/ <CR>
+
+"syntastic
+"Ruby ファイルに対し RuboCop を実行する
+let g:syntastic_ruby_checkers = ['rubocop']
 
 "==<tabkey>===================================================================
 set cindent
