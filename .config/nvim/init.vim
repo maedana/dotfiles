@@ -73,6 +73,7 @@ NeoBundle 'vim-scripts/xoria256.vim'
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'wakatime/vim-wakatime'
 NeoBundle 'scrooloose/syntastic.git'
+NeoBundle 'fatih/vim-go'
 call neobundle#end()
 
 filetype plugin on
@@ -89,6 +90,7 @@ if v:version >= 700
 endif
 
 let g:deoplete#enable_at_startup = 1 ":DeopleteEnable実行でもよい
+let g:deoplete#enable_smart_case = 1
 
 "previm
 "see https://github.com/kannokanno/previm
@@ -125,6 +127,7 @@ nnoremap <silent> ,urfr :<C-u>Unite file file/new -input=spec/ <CR>
 "syntastic
 "Ruby ファイルに対し RuboCop を実行する
 let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_go_checkers = ['golint', 'gotype', 'govet', 'go']
 
 "==<tabkey>===================================================================
 set cindent
