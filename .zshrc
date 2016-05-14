@@ -179,9 +179,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # for rbenv
 eval "$(rbenv init -)"
 
-# for gvm
-[[ -s "/home/maedana/.gvm/scripts/gvm" ]] && source "/home/maedana/.gvm/scripts/gvm"
-
 # for pyenv
 eval "$(pyenv init -)"
 
