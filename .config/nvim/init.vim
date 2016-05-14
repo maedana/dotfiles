@@ -60,7 +60,6 @@ NeoBundle 'yanktmp.vim'
 " original repos on github
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/deoplete.nvim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-rails'
@@ -74,6 +73,8 @@ NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'wakatime/vim-wakatime'
 NeoBundle 'scrooloose/syntastic.git'
 NeoBundle 'fatih/vim-go'
+NeoBundle 'Shougo/deoplete.nvim'
+NeoBundle 'zchee/deoplete-go', {'build': {'unix': 'make'}}
 call neobundle#end()
 
 filetype plugin on
@@ -89,8 +90,15 @@ if v:version >= 700
   map <silent> sP :call YanktmpPaste_P()<CR>
 endif
 
-let g:deoplete#enable_at_startup = 1 ":DeopleteEnable実行でもよい
-let g:deoplete#enable_smart_case = 1
+"deoplete
+":DeopleteEnable実行でもよい
+let g:deoplete#enable_at_startup = 1
+
+"deoplete-go
+let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+let g:deoplete#sources#go#align_class = 1
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+let g:deoplete#sources#go#package_dot = 1
 
 "previm
 "see https://github.com/kannokanno/previm
