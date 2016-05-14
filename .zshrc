@@ -182,6 +182,9 @@ eval "$(rbenv init -)"
 # for pyenv
 eval "$(pyenv init -)"
 
+# for goenv
+eval "$(goenv init -)"
+
 # for topydo
 alias t="topydo"
 alias tx="t ls -x"
