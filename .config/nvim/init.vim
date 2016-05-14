@@ -23,6 +23,8 @@ set mouse=a
 set foldmethod=indent
 set foldlevel=1
 set ambiwidth=double
+" omunicompleteでpreviewが出ないようにする
+set completeopt=menuone
 " via http://d.hatena.ne.jp/ns9tks/20080318/1205851539
 " 行頭で h を押すと折畳を閉じる。
 nnoremap <expr> h col('.') == 1 && foldlevel(line('.')) > 0 ? 'zc' : 'h'

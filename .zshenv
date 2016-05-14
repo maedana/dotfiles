@@ -5,5 +5,6 @@ export BROWSER=/usr/bin/google-chrome
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+export GOROOT=`go env GOROOT`
 export GOPATH="$HOME/.go"
 export PATH="$HOME/.goenv/bin:$PATH"
