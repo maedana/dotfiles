@@ -186,6 +186,9 @@ set list
 highlight Pmenu      ctermbg=8  guibg=#808080
 highlight PmenuSel   ctermbg=12 guibg=#8080ff
 highlight PmenuSbar  ctermbg=0  guibg=#000000
+"背景透過のため
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
 
 "==<encode>===================================================================
 set encoding=utf-8
