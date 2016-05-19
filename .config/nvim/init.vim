@@ -19,8 +19,6 @@ set history=1000
 set backspace=indent,eol,start
 " mouse mode
 set mouse=a
-" omunicompleteでpreviewが出ないようにする
-set completeopt=menuone
 " 行をまたいで移動出来るようにする
 set whichwrap=b,s,h,l,<,>,[,]
 " 全角記号対策
@@ -88,6 +86,26 @@ nnoremap <expr> l foldclosed(line('.')) != -1 ? 'zo0' : 'l'
 vnoremap <expr> h col('.') == 1 && foldlevel(line('.')) > 0 ? 'zcgv' : 'h'
 " 折畳上で l を押すと選択範囲に含まれる折畳を開く。
 vnoremap <expr> l foldclosed(line('.')) != -1 ? 'zogv0' : 'l'
+
+"==omunicomplete==============================================================
+" omunicompleteでpreviewが出ないようにする
+set completeopt=menuone
+" 補完をTabキーで出来るようにする
+function! InsertTabWrapper()
+  if pumvisible()
+    return "\<C-N>"
+  endif
+
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k\|<\|/'
+    return "\<TAB>"
+  elseif &omnifunc == ''
+    return "\<C-P>"
+  else
+    return "\<C-X>\<C-O>"
+  endif
+endfunction
+inoremap <TAB> <C-R>=InsertTabWrapper()<CR>
 
 "==<buffer>===================================================================
 map <LEFT> :bp!<CR>
