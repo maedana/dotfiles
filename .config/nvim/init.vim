@@ -23,6 +23,8 @@ set mouse=a
 set whichwrap=b,s,h,l,<,>,[,]
 " 全角記号対策
 set ambiwidth=double
+"ヤンクでクリップボードにコピー。外部ツールのインストールが必要。詳しくはdocument参照
+set clipboard+=unnamedplus
 
 " grep設定
 " agがあれば使う
