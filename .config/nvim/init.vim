@@ -188,4 +188,6 @@ highlight NonText ctermbg=none
 "スペースの可視化
 highlight ZenkakuSpace ctermbg=6
 match ZenkakuSpace /\s\+$\|　/
-
+"Tabの可視化
+set list
+set listchars=tab:»-
