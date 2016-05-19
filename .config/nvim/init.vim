@@ -92,22 +92,6 @@ vnoremap <expr> l foldclosed(line('.')) != -1 ? 'zogv0' : 'l'
 "==omunicomplete==============================================================
 " omunicompleteでpreviewが出ないようにする
 set completeopt=menuone
-" 補完をTabキーで出来るようにする
-function! InsertTabWrapper()
-  if pumvisible()
-    return "\<C-N>"
-  endif
-
-  let col = col('.') - 1
-  if !col || getline('.')[col - 1] !~ '\k\|<\|/'
-    return "\<TAB>"
-  elseif &omnifunc == ''
-    return "\<C-P>"
-  else
-    return "\<C-X>\<C-O>"
-  endif
-endfunction
-inoremap <TAB> <C-R>=InsertTabWrapper()<CR>
 
 "==<buffer>===================================================================
 map <LEFT> :bp!<CR>
@@ -143,6 +127,9 @@ NeoBundle 'sakuraiyuta/commentout.vim'
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'scrooloose/syntastic.git'
 NeoBundle 'cohama/lexima.vim'
+" ==snippets
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'honza/vim-snippets'
 " ==autocomplete
 NeoBundle 'Shougo/deoplete.nvim'
 NeoBundle 'zchee/deoplete-go', {'build': {'unix': 'make'}}
@@ -169,6 +156,8 @@ endif
 "deoplete
 ":DeopleteEnable実行でもよい
 let g:deoplete#enable_at_startup = 1
+"Tabで補完を選択
+inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : deoplete#mappings#manual_complete()
 
 "deoplete-go
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
@@ -180,6 +169,12 @@ let g:deoplete#sources#go#package_dot = 1
 "Ruby ファイルに対し RuboCop を実行する
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_go_checkers = ['golint', 'gotype', 'govet', 'go']
+
+"ultisnips
+"snippetの展開(tabだと補完候補の選択とぶつかるので<c-k>にした)
+let g:UltiSnipsExpandTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-l>"
+let g:UltiSnipsJumpBackwardTrigger="<c-h>"
 
 "==<color>===================================================================
 "xoria256
