@@ -142,6 +142,7 @@ NeoBundle 'fatih/vim-go'
 NeoBundle 'sakuraiyuta/commentout.vim'
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'scrooloose/syntastic.git'
+NeoBundle 'cohama/lexima.vim'
 " ==autocomplete
 NeoBundle 'Shougo/deoplete.nvim'
 NeoBundle 'zchee/deoplete-go', {'build': {'unix': 'make'}}
