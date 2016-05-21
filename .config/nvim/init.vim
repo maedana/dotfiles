@@ -158,7 +158,7 @@ endif
 ":DeopleteEnable実行でもよい
 let g:deoplete#enable_at_startup = 1
 "Tabで補完を選択
-inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : deoplete#mappings#manual_complete()
+inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>" 
 
 "deoplete-go
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
