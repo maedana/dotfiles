@@ -188,3 +188,8 @@ eval "$(goenv init -)"
 # for topydo
 alias t="topydo"
 alias tx="t ls -x"
+
+# for set environment
+for i in /etc/profile.d/*.sh ; do
+  [ -r $i ] && source $i
+done
