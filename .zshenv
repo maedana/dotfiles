@@ -8,3 +8,4 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 export GOROOT=`go env GOROOT`
 export GOPATH="$HOME/.go"
 export PATH="$HOME/.goenv/bin:$GOPATH/bin:$PATH"
+export PATH="$HOME/.crenv/bin:$PATH"
