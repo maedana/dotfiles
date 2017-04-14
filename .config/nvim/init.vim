@@ -109,6 +109,9 @@ set showmatch
 
 syntax on
 
+"==<terminal>=================================================================
+tnoremap <silent> <ESC> <C-\><C-n>
+
 "==<NeoBundle>================================================================
 filetype off
 
@@ -169,7 +172,7 @@ let g:deoplete#sources#go#package_dot = 1
 "syntastic
 "Ruby ファイルに対し RuboCop を実行する
 let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_go_checkers = ['golint', 'gotype', 'govet', 'go']
+let g:syntastic_go_checkers = ['golint', 'go']
 
 "ultisnips
 "snippetの展開(tabだと補完候補の選択とぶつかるので<c-k>にした)
