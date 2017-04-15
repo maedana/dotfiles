@@ -18,3 +18,5 @@
 	account = maedana@sonicgarden.jp
 [core]
 	excludesfile = /home/maedana/.gitignore
+[ghq]
+	root = /home/maedana/src
