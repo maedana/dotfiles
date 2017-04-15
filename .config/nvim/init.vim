@@ -142,6 +142,8 @@ NeoBundle 'vim-scripts/xoria256.vim'
 NeoBundle 'wakatime/vim-wakatime'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'yanktmp.vim'
+NeoBundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+NeoBundle 'junegunn/fzf.vim'
 call neobundle#end()
 
 filetype plugin on
@@ -179,6 +181,11 @@ let g:syntastic_go_checkers = ['golint', 'go']
 let g:UltiSnipsExpandTrigger="<c-k>"
 let g:UltiSnipsJumpForwardTrigger="<c-l>"
 let g:UltiSnipsJumpBackwardTrigger="<c-h>"
+
+"fzf
+"   :Ag  - Start fzf with preview window
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview('right:50%:wrap'))
 
 "==<color>===================================================================
 "xoria256
