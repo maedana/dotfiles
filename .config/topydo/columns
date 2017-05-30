@@ -1,0 +1,24 @@
+[Current]
+title = Current
+sortexpr = desc:importance,desc:priority
+filterexpr = -due:
+show_all = 1
+
+[Project]
+title = Project
+sortexpr = desc:importance,desc:priority
+filterexpr = -due:
+groupexpr = project
+show_all = 1
+
+[Naruhaya]
+title = Naruhaya
+sortexpr = desc:importance,desc:priority
+filterexpr = due:<=4w
+groupexpr = project
+show_all = 1
+
+[All]
+title = All
+sortexpr = desc:importance,desc:priority
+show_all = 1
