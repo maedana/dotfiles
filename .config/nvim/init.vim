@@ -27,9 +27,9 @@ set ambiwidth=double
 set clipboard+=unnamedplus
 
 " grep設定
-" agがあれば使う
-if executable('ag')
-  set grepprg=ag\ --nogroup
+" rgがあれば使う
+if executable('rg')
+  set grepprg=rg\ --vimgrep
   set grepformat=%f:%l:%m
 endif
 
