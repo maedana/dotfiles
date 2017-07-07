@@ -174,6 +174,7 @@ let g:deoplete#sources#go#package_dot = 1
 
 "syntastic
 let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_haml_checkers = ['haml_lint']
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_go_checkers = ['golint', 'go']
 
