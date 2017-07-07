@@ -30,7 +30,7 @@ set clipboard+=unnamedplus
 " rgがあれば使う
 if executable('rg')
   set grepprg=rg\ --vimgrep
-  set grepformat=%f:%l:%m
+  set grepformat=%f:%l:%c:%m
 endif
 
 " <Leader>及び<LocalLeader>をデフォルトの\からspaceにする
@@ -172,7 +172,6 @@ let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const
 let g:deoplete#sources#go#package_dot = 1
 
 "syntastic
-"Ruby ファイルに対し RuboCop を実行する
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_go_checkers = ['golint', 'go']
 
