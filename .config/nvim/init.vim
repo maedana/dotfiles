@@ -130,6 +130,7 @@ NeoBundle 'fatih/vim-go'
 NeoBundle 'sakuraiyuta/commentout.vim'
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'scrooloose/syntastic.git'
+NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
 NeoBundle 'cohama/lexima.vim'
 " ==snippets
 NeoBundle 'SirVer/ultisnips'
@@ -173,6 +174,7 @@ let g:deoplete#sources#go#package_dot = 1
 
 "syntastic
 let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_go_checkers = ['golint', 'go']
 
 "ultisnips
