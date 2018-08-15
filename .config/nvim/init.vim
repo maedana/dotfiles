@@ -23,7 +23,7 @@ if dein#load_state('/home/maedana/.cache/dein')
   " ==develop-support
   call dein#add('sakuraiyuta/commentout.vim')
   call dein#add('thinca/vim-qfreplace')
-  call dein#add('scrooloose/syntastic.git')
+  call dein#add('w0rp/ale')
   call dein#add('rhysd/vim-crystal')
   call dein#add('cohama/lexima.vim')
   " ==snippets
@@ -189,11 +189,18 @@ let g:deoplete#sources#go#align_class = 1
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 let g:deoplete#sources#go#package_dot = 1
 
-"syntastic
-let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_haml_checkers = ['haml_lint']
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_go_checkers = ['golint', 'go']
+"ale
+let g:ale_statusline_format = ['E%d', 'W%d', 'OK']
+nmap <silent> <C-w>j <Plug>(ale_next_wrap)
+nmap <silent> <C-w>k <Plug>(ale_previous_wrap)
+let g:ale_fixers = {}
+let g:ale_fixers['ruby'] = ['rubocop']
+let g:ale_fixers['javascript'] = ['prettier-eslint']
+let g:ale_linter_aliases = {'vue': ['javascript', 'html']}
+" ファイル保存時に実行
+let g:ale_fix_on_save = 1
+" ローカルの設定ファイルを考慮する
+let g:ale_javascript_prettier_use_local_config = 1
 
 "ultisnips
 "snippetの展開(tabだと補完候補の選択とぶつかるので<c-k>にした)
