@@ -205,3 +205,5 @@ alias tx="t ls -x"
 for i in /etc/profile.d/*.sh ; do
   [ -r $i ] && source $i
 done
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

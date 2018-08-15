@@ -1,3 +1,59 @@
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath+=/home/maedana/.cache/dein/repos/github.com/Shougo/dein.vim
+
+" Required:
+if dein#load_state('/home/maedana/.cache/dein')
+  call dein#begin('/home/maedana/.cache/dein')
+
+  " Let dein manage dein
+  " Required:
+  call dein#add('/home/maedana/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+  " Add or remove your plugins here:
+  " ==language-support
+  call dein#add('kchmck/vim-coffee-script')
+  call dein#add('tpope/vim-rails')
+  call dein#add('fatih/vim-go')
+  call dein#add('posva/vim-vue')
+  " ==develop-support
+  call dein#add('sakuraiyuta/commentout.vim')
+  call dein#add('thinca/vim-qfreplace')
+  call dein#add('scrooloose/syntastic.git')
+  call dein#add('rhysd/vim-crystal')
+  call dein#add('cohama/lexima.vim')
+  " ==snippets
+  call dein#add('SirVer/ultisnips')
+  call dein#add('honza/vim-snippets')
+  " ==autocomplete
+  call dein#add('Shougo/deoplete.nvim')
+  " ==misc
+  call dein#add('vim-scripts/xoria256.vim')
+  call dein#add('tpope/vim-fugitive')
+  call dein#add('vim-scripts/yanktmp.vim')
+  call dein#add('junegunn/fzf', { 'build': './install', 'merged': 0 })
+  call dein#add('junegunn/fzf.vim')
+
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
+
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
+
+"End dein Scripts-------------------------
+
 "==<etc>======================================================================
 " vi互換機能オフ
 set nocompatible
@@ -112,45 +168,6 @@ syntax on
 "==<terminal>=================================================================
 tnoremap <silent> <ESC> <C-\><C-n>
 
-"==<NeoBundle>================================================================
-filetype off
-
-if has('vim_starting')
-  set runtimepath+=~/.config/nvim/bundle/neobundle.vim/
-endif
-
-call neobundle#begin(expand('~/.config/nvim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/neobundle.vim'
-" ==language-support
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'fatih/vim-go'
-NeoBundle 'posva/vim-vue'
-" ==develop-support
-NeoBundle 'sakuraiyuta/commentout.vim'
-NeoBundle 'thinca/vim-qfreplace'
-NeoBundle 'scrooloose/syntastic.git'
-NeoBundle 'rhysd/vim-crystal'
-NeoBundle 'cohama/lexima.vim'
-" ==snippets
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'honza/vim-snippets'
-" ==autocomplete
-NeoBundle 'Shougo/deoplete.nvim'
-NeoBundle 'zchee/deoplete-go', {'build': {'unix': 'make'}}
-" ==misc
-NeoBundle 'vim-scripts/xoria256.vim'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'yanktmp.vim'
-NeoBundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-NeoBundle 'junegunn/fzf.vim'
-call neobundle#end()
-
-filetype plugin on
-filetype indent on
-NeoBundleCheck
-
 "==<plugin>===================================================================
 "yanktmp.vim(via id:secondlife
 if v:version >= 700
@@ -185,9 +202,16 @@ let g:UltiSnipsJumpForwardTrigger="<c-l>"
 let g:UltiSnipsJumpBackwardTrigger="<c-h>"
 
 "fzf
-"   :Ag  - Start fzf with preview window
+" :Rg - ripgrepで検索
 command! -bang -nargs=* Ag
   \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview('right:50%:wrap'))
+
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
 
 "==<color>===================================================================
 "xoria256
