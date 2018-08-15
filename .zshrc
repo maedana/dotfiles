@@ -197,9 +197,6 @@ eval "$(goenv init -)"
 # for cenv
 eval "$(crenv init -)"
 
-# for ndenv
-eval "$(ndenv init -)"
-
 # for topydo
 alias t="topydo"
 alias tx="t ls -x"

@@ -10,4 +10,6 @@ export PATH="$GOENV_ROOT/bin:$PATH"
 export GOPATH="$HOME/.go"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$HOME/.crenv/bin:$PATH"
-export PATH="$HOME/.ndenv/bin:$PATH"
+unset GPG_AGENT_INFO
+# yarn
+ export PATH="$PATH:`yarn global bin`"
