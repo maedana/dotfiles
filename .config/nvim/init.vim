@@ -23,7 +23,7 @@ set mouse=a
 set whichwrap=b,s,h,l,<,>,[,]
 " 全角記号対策
 set ambiwidth=double
-"ヤンクでクリップボードにコピー。外部ツールのインストールが必要。詳しくはdocument参照
+" ヤンクでクリップボードにコピー。外部ツールのインストールが必要。詳しくはdocument参照
 set clipboard+=unnamedplus
 
 " grep設定
@@ -126,11 +126,12 @@ NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'fatih/vim-go'
+NeoBundle 'posva/vim-vue'
 " ==develop-support
 NeoBundle 'sakuraiyuta/commentout.vim'
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'scrooloose/syntastic.git'
-NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
+NeoBundle 'rhysd/vim-crystal'
 NeoBundle 'cohama/lexima.vim'
 " ==snippets
 NeoBundle 'SirVer/ultisnips'
@@ -140,7 +141,6 @@ NeoBundle 'Shougo/deoplete.nvim'
 NeoBundle 'zchee/deoplete-go', {'build': {'unix': 'make'}}
 " ==misc
 NeoBundle 'vim-scripts/xoria256.vim'
-NeoBundle 'wakatime/vim-wakatime'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'yanktmp.vim'
 NeoBundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
