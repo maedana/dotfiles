@@ -206,4 +206,5 @@ for i in /etc/profile.d/*.sh ; do
   [ -r $i ] && source $i
 done
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# vimで使いたいだけなので
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

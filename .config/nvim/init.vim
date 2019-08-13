@@ -191,14 +191,14 @@ let g:deoplete#sources#go#package_dot = 1
 
 "ale
 let g:ale_statusline_format = ['E%d', 'W%d', 'OK']
-nmap <silent> <C-w>j <Plug>(ale_next_wrap)
-nmap <silent> <C-w>k <Plug>(ale_previous_wrap)
+"nmap <silent> <C-w>j <Plug>(ale_next_wrap)
+"nmap <silent> <C-w>k <Plug>(ale_previous_wrap)
 let g:ale_fixers = {}
 let g:ale_fixers['ruby'] = ['rubocop']
 let g:ale_fixers['javascript'] = ['prettier-eslint']
 let g:ale_linter_aliases = {'vue': ['javascript', 'html']}
 " ファイル保存時に実行
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 " ローカルの設定ファイルを考慮する
 let g:ale_javascript_prettier_use_local_config = 1
 
