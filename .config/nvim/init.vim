@@ -20,6 +20,8 @@ if dein#load_state('/home/maedana/.cache/dein')
   call dein#add('tpope/vim-rails')
   call dein#add('fatih/vim-go')
   call dein#add('posva/vim-vue')
+  call dein#add('leafgarland/typescript-vim')
+  call dein#add('peitalin/vim-jsx-typescript')
   " ==develop-support
   call dein#add('sakuraiyuta/commentout.vim')
   call dein#add('thinca/vim-qfreplace')
