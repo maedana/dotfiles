@@ -37,7 +37,6 @@ if dein#load_state('/home/maedana/.cache/dein')
   call dein#add('vim-scripts/yanktmp.vim')
   call dein#add('junegunn/fzf', { 'build': './install', 'merged': 0 })
   call dein#add('junegunn/fzf.vim')
-  call dein#add('gorodinskiy/vim-coloresque')
 
   " Required:
   call dein#end()
