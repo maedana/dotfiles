@@ -20,8 +20,6 @@ if dein#load_state('/home/maedana/.cache/dein')
   call dein#add('tpope/vim-rails')
   call dein#add('fatih/vim-go')
   call dein#add('posva/vim-vue')
-  call dein#add('leafgarland/typescript-vim')
-  call dein#add('peitalin/vim-jsx-typescript')
   " ==develop-support
   call dein#add('sakuraiyuta/commentout.vim')
   call dein#add('thinca/vim-qfreplace')
@@ -32,16 +30,14 @@ if dein#load_state('/home/maedana/.cache/dein')
   call dein#add('SirVer/ultisnips')
   call dein#add('honza/vim-snippets')
   " ==autocomplete
-  call dein#add('prabirshrestha/vim-lsp')
-  call dein#add('mattn/vim-lsp-settings')
   call dein#add('Shougo/deoplete.nvim')
-  call dein#add('lighttiger2505/deoplete-vim-lsp')
   " ==misc
   call dein#add('vim-scripts/xoria256.vim')
   call dein#add('tpope/vim-fugitive')
   call dein#add('vim-scripts/yanktmp.vim')
   call dein#add('junegunn/fzf', { 'build': './install', 'merged': 0 })
   call dein#add('junegunn/fzf.vim')
+  call dein#add('gorodinskiy/vim-coloresque')
 
   " Required:
   call dein#end()
