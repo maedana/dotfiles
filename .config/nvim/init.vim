@@ -25,7 +25,7 @@ if dein#load_state('/home/maedana/.cache/dein')
   " ==develop-support
   call dein#add('sakuraiyuta/commentout.vim')
   call dein#add('thinca/vim-qfreplace')
-  call dein#add('w0rp/ale')
+  call dein#add('dense-analysis/ale')
   call dein#add('rhysd/vim-crystal')
   call dein#add('cohama/lexima.vim')
   " ==snippets
