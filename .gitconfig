@@ -29,6 +29,6 @@
 	allowed = AKIAIOSFODNN7EXAMPLE
 	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 [init]
-	templateDir = /home/maedana/.git-templates/git-secrets
+	templatedir = ~/.git-templates/git-secrets
 [url "ssh://git@heroku.com/"]
 	insteadOf = https://git.heroku.com/
