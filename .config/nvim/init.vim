@@ -22,6 +22,8 @@ if dein#load_state('/home/maedana/.cache/dein')
   call dein#add('posva/vim-vue')
   call dein#add('leafgarland/typescript-vim')
   call dein#add('peitalin/vim-jsx-typescript')
+  call dein#add('rust-lang/rust.vim')
+
   " ==develop-support
   call dein#add('sakuraiyuta/commentout.vim')
   call dein#add('thinca/vim-qfreplace')
@@ -227,6 +229,9 @@ command! -bang -nargs=* Rg
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
+
+" 保存時に自動でrustfmt
+let g:rustfmt_autosave = 1
 
 "==<color>===================================================================
 "xoria256
