@@ -34,10 +34,11 @@ if dein#load_state('/home/maedana/.cache/dein')
   call dein#add('SirVer/ultisnips')
   call dein#add('honza/vim-snippets')
   " ==autocomplete
-  call dein#add('prabirshrestha/vim-lsp')
-  call dein#add('mattn/vim-lsp-settings')
-  call dein#add('Shougo/deoplete.nvim')
-  call dein#add('lighttiger2505/deoplete-vim-lsp')
+  " call dein#add('prabirshrestha/vim-lsp')
+  " call dein#add('mattn/vim-lsp-settings')
+  " call dein#add('Shougo/deoplete.nvim')
+  " call dein#add('lighttiger2505/deoplete-vim-lsp')
+  call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
   " ==misc
   call dein#add('vim-scripts/xoria256.vim')
   call dein#add('tpope/vim-fugitive')
@@ -184,20 +185,20 @@ if v:version >= 700
   map <silent> sP :call YanktmpPaste_P()<CR>
 endif
 
-"deoplete, lsp
-":DeopleteEnable実行でもよい
-let g:deoplete#enable_at_startup = 1
+""deoplete, lsp
+"":DeopleteEnable実行でもよい
+"let g:deoplete#enable_at_startup = 1
 "Tabで補完を選択
-inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>" 
-
-" see also https://github.com/mattn/vim-lsp-settings#notice
-let g:lsp_settings_servers_dir = $HOME . '/.local/share/vim-lsp-settings/servers'
-
-"deoplete-go
-let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
-let g:deoplete#sources#go#align_class = 1
-let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
-let g:deoplete#sources#go#package_dot = 1
+inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+"
+"" see also https://github.com/mattn/vim-lsp-settings#notice
+"let g:lsp_settings_servers_dir = $HOME . '/.local/share/vim-lsp-settings/servers'
+"
+""deoplete-go
+"let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+"let g:deoplete#sources#go#align_class = 1
+"let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+"let g:deoplete#sources#go#package_dot = 1
 
 "ale
 let g:ale_statusline_format = ['E%d', 'W%d', 'OK']
