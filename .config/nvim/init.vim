@@ -150,9 +150,8 @@ vnoremap <expr> h col('.') == 1 && foldlevel(line('.')) > 0 ? 'zcgv' : 'h'
 " 折畳上で l を押すと選択範囲に含まれる折畳を開く。
 vnoremap <expr> l foldclosed(line('.')) != -1 ? 'zogv0' : 'l'
 
-"==omunicomplete==============================================================
-" omunicompleteでpreviewが出ないようにする
-set completeopt=menuone
+"==autocomplete==============================================================
+set completeopt=menuone,noinsert
 
 "==<buffer>===================================================================
 map <LEFT> :bp!<CR>
