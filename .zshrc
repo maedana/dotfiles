@@ -54,6 +54,10 @@ function gcd () {
 # for rbenv
 eval "$(rbenv init -)"
 
+# fornodenv
+export PATH=$HOME/.nodenv/bin:$PATH
+eval "$(nodenv init -)"
+
 # for topydo
 alias t="topydo"
 alias tx="t ls -x"
