@@ -44,12 +44,8 @@ compinit
 #
 # expand aliases before completing
 #
+alias ls='ls --color=auto'
 setopt complete_aliases # aliased ls needs if file/dir completions work
-
-## peco
-function agvim () {
-  vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
-}
 
 function gcd () {
   cd $(ghq list -p | peco --query "$LBUFFER")
