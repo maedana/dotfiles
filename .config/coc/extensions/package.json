@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "coc-rust-analyzer": ">=0.43.1",
-    "coc-solargraph": ">=1.2.0"
+    "coc-rust-analyzer": ">=0.47.0",
+    "coc-solargraph": ">=1.2.1"
   }
 }
