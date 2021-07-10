@@ -30,9 +30,6 @@ if dein#load_state('/home/maedana/.cache/dein')
   call dein#add('dense-analysis/ale')
   call dein#add('rhysd/vim-crystal')
   call dein#add('cohama/lexima.vim')
-  " ==snippets
-  call dein#add('SirVer/ultisnips')
-  call dein#add('honza/vim-snippets')
   " ==autocomplete
   call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
   " ==misc
@@ -214,17 +211,7 @@ let g:ale_fix_on_save = 0
 " ローカルの設定ファイルを考慮する
 let g:ale_javascript_prettier_use_local_config = 1
 
-"ultisnips
-"snippetの展開(tabだと補完候補の選択とぶつかるので<c-k>にした)
-let g:UltiSnipsExpandTrigger="<c-k>"
-let g:UltiSnipsJumpForwardTrigger="<c-l>"
-let g:UltiSnipsJumpBackwardTrigger="<c-h>"
-
 "fzf
-" :Rg - ripgrepで検索
-command! -bang -nargs=* Ag
-  \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview('right:50%:wrap'))
-
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
