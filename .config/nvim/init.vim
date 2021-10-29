@@ -24,6 +24,9 @@ if dein#load_state('/home/maedana/.cache/dein')
   call dein#add('peitalin/vim-jsx-typescript')
   call dein#add('rust-lang/rust.vim')
 
+  " ==syntax-support
+  call dein#add('nvim-treesitter/nvim-treesitter', {'hook_post_update': 'TSUpdate'})
+
   " ==develop-support
   call dein#add('sakuraiyuta/commentout.vim')
   call dein#add('thinca/vim-qfreplace')
@@ -33,7 +36,8 @@ if dein#load_state('/home/maedana/.cache/dein')
   " ==autocomplete
   call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
   " ==misc
-  call dein#add('vim-scripts/xoria256.vim')
+  " call dein#add('vim-scripts/xoria256.vim')
+  call dein#add('tomasiser/vim-code-dark')
   call dein#add('tpope/vim-fugitive')
   call dein#add('vim-scripts/yanktmp.vim')
   call dein#add('junegunn/fzf', { 'build': './install', 'merged': 0 })
@@ -47,6 +51,16 @@ endif
 " Required:
 filetype plugin indent on
 syntax enable
+
+"==<treesitter>======================================================================
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+  },
+}
+EOF
 
 " If you want to install not installed plugins on startup.
 "if dein#check_install()
@@ -223,8 +237,7 @@ command! -bang -nargs=* Rg
 let g:rustfmt_autosave = 1
 
 "==<color>===================================================================
-"xoria256
-colorscheme xoria256
+colorscheme codedark
 highlight Pmenu      ctermbg=8  guibg=#808080
 highlight PmenuSel   ctermbg=12 guibg=#8080ff
 highlight PmenuSbar  ctermbg=0  guibg=#000000
