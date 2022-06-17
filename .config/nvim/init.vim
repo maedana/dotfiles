@@ -18,7 +18,6 @@ if dein#load_state('/home/maedana/.cache/dein')
   " ==language-support
   call dein#add('kchmck/vim-coffee-script')
   call dein#add('tpope/vim-rails')
-  call dein#add('fatih/vim-go')
   call dein#add('posva/vim-vue')
   call dein#add('leafgarland/typescript-vim')
   call dein#add('peitalin/vim-jsx-typescript')
@@ -31,7 +30,6 @@ if dein#load_state('/home/maedana/.cache/dein')
   call dein#add('sakuraiyuta/commentout.vim')
   call dein#add('thinca/vim-qfreplace')
   call dein#add('dense-analysis/ale')
-  call dein#add('rhysd/vim-crystal')
   call dein#add('cohama/lexima.vim')
   " ==autocomplete
   call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
@@ -52,7 +50,8 @@ endif
 syntax on
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained",
+  ensure_installed = "all",
+  ignore_install = { "phpdoc" },
   highlight = {
     enable = true,
   },

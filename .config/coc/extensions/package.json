@@ -2,6 +2,7 @@
   "dependencies": {
     "coc-rust-analyzer": ">=0.47.0",
     "coc-solargraph": ">=1.2.1",
+    "coc-tsserver": ">=1.10.3",
     "coc-vetur": ">=1.2.5"
   }
 }
