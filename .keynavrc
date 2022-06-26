@@ -1,0 +1,70 @@
+# This is a keynavrc file. Yours should live in 
+# $HOME/.config/keynav/keynavrc
+#
+# Lines beginning with '#' are comments.
+# Format is:
+#   keysequence cmd1,cmd2,cmd3...
+#
+# Other special values are:
+#   'clear' on a line by itself (no quotes) will erase all keybindings
+#   (including the defaults)
+#   'daemonize' on a line by itself (no quotes) will make keynav background
+#   after parsing the configfile and having no critical errors.
+# 
+# The 'start' command alone is handled specially, in that any key sequence
+# mapped to 'start' will be grabbed when keynav starts up so you can invoke it
+# to activate keynav. The remaining keys are only recognized while keynav is
+# active
+#
+# Project page; http://www.semicomplete.com/projects/keynav
+
+# Use 'clear' to blow away any previous keybindings
+#clear
+
+# Use 'daemonize' to background ourselves.
+#daemonize
+
+# Start
+# ctrl+semicolon start
+ctrl+semicolon start,windowzoom,cursorzoom 20 20 # 現在のカーソル位置で20x20のサイズで起動
+
+# End
+Escape end
+
+# Move
+h move-left 0.5
+j move-down 0.5
+k move-up 0.5
+l move-right 0.5
+shift+h move-left 50
+shift+j move-down 50
+shift+k move-up 50
+shift+l move-right 50
+ctrl+h move-left 100
+ctrl+j move-down 100
+ctrl+k move-up 100
+ctrl+l move-right 100
+
+# Click & Drag
+space warp,click 1,end
+semicolon warp,end
+1 click 1
+2 click 2
+3 click 3
+F1 warp,drag 1
+F2 warp,drag 2
+F3 warp,drag 3
+shift+F1 warp,drag 1 shift
+shift+F2 warp,drag 2 shift
+shift+F3 warp,drag 3 shift
+
+# Jump keys
+w windowzoom,cursorzoom 20 20,move-up 400,move-left 740
+s windowzoom,cursorzoom 20 20,move-down 0,move-left 740
+x windowzoom,cursorzoom 20 20,move-down 400,move-left 740
+e windowzoom,cursorzoom 20 20,move-up 400,move-right 0
+d windowzoom,warp,cursorzoom 20 20 # 画面の中心へ移動
+c windowzoom,cursorzoom 20 20,move-down 400,move-right 0
+r windowzoom,cursorzoom 20 20,move-up 400,move-right 740
+f windowzoom,cursorzoom 20 20,move-down 0,move-right 740
+v windowzoom,cursorzoom 20 20,move-down 400,move-right 740
