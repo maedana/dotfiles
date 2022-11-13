@@ -43,6 +43,7 @@ if dein#load_state('/home/maedana/.cache/dein')
 
   " Required:
   call dein#end()
+  call dein#add('rebelot/kanagawa.nvim')
   call dein#save_state()
 endif
 
@@ -233,13 +234,16 @@ command! -bang -nargs=* Rg
 let g:rustfmt_autosave = 1
 
 "==<color>===================================================================
-colorscheme codedark
+colorscheme kanagawa
 highlight Pmenu      ctermbg=8  guibg=#808080
 highlight PmenuSel   ctermbg=12 guibg=#8080ff
 highlight PmenuSbar  ctermbg=0  guibg=#000000
 "背景透過のため
-highlight Normal ctermbg=none
-highlight NonText ctermbg=none
+highlight Normal ctermbg=NONE guibg=NONE
+highlight NonText ctermbg=NONE guibg=NONE
+highlight LineNr ctermbg=NONE guibg=NONE
+highlight Folded ctermbg=NONE guibg=NONE
+highlight EndOfBuffer ctermbg=NONE guibg=NONE
 "スペースの可視化
 highlight ZenkakuSpace ctermbg=6
 match ZenkakuSpace /\s\+$\|　/
