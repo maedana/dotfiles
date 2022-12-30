@@ -1,7 +1,20 @@
 vim.cmd.packadd 'packer.nvim'
 require("packer").startup(function()
   -- color
-  use 'rebelot/kanagawa.nvim'
+  use {
+    'EdenEast/nightfox.nvim',
+    config = function() require('nightfox').setup({
+      vim.cmd([[
+        colorscheme nordfox
+        highlight Normal ctermbg=NONE guibg=NONE
+        highlight NonText ctermbg=NONE guibg=NONE
+        highlight LineNr ctermbg=NONE guibg=NONE
+        highlight Folded ctermbg=NONE guibg=NONE
+        highlight EndOfBuffer ctermbg=NONE guibg=NONE
+      ]])
+    })
+    end,
+  }
 
   -- syntax
   use {

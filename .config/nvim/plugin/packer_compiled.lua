@@ -89,16 +89,17 @@ _G.packer_plugins = {
     path = "/home/maedana/.local/share/nvim/site/pack/packer/start/commentout.vim",
     url = "https://github.com/sakuraiyuta/commentout.vim"
   },
-  ["kanagawa.nvim"] = {
-    loaded = true,
-    path = "/home/maedana/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
-    url = "https://github.com/rebelot/kanagawa.nvim"
-  },
   ["lualine.nvim"] = {
     config = { "\27LJ\2\n]\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\foptions\1\0\0\1\0\1\17globalstatus\2\nsetup\flualine\frequire\0" },
     loaded = true,
     path = "/home/maedana/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["nightfox.nvim"] = {
+    config = { "\27LJ\2\nû\2\0\0\6\0\6\1\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\3\0006\3\3\0009\3\4\3'\5\5\0B\3\2\0?\3\0\0B\0\2\1K\0\1\0¢\2        colorscheme nordfox\n        highlight Normal ctermbg=NONE guibg=NONE\n        highlight NonText ctermbg=NONE guibg=NONE\n        highlight LineNr ctermbg=NONE guibg=NONE\n        highlight Folded ctermbg=NONE guibg=NONE\n        highlight EndOfBuffer ctermbg=NONE guibg=NONE\n      \bcmd\bvim\nsetup\rnightfox\frequire\3€€À™\4\0" },
+    loaded = true,
+    path = "/home/maedana/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
   },
   ["nvim-treesitter"] = {
     config = { "\27LJ\2\nº\1\0\0\4\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\2B\0\2\1K\0\1\0\vindent\1\0\1\venable\2\14highlight\1\0\1\venable\2\19ignore_install\1\2\0\0\vphpdoc\1\0\1\21ensure_installed\ball\nsetup\28nvim-treesitter.configs\frequire\0" },
@@ -129,6 +130,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nightfox.nvim
+time([[Config for nightfox.nvim]], true)
+try_loadstring("\27LJ\2\nû\2\0\0\6\0\6\1\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\3\0006\3\3\0009\3\4\3'\5\5\0B\3\2\0?\3\0\0B\0\2\1K\0\1\0¢\2        colorscheme nordfox\n        highlight Normal ctermbg=NONE guibg=NONE\n        highlight NonText ctermbg=NONE guibg=NONE\n        highlight LineNr ctermbg=NONE guibg=NONE\n        highlight Folded ctermbg=NONE guibg=NONE\n        highlight EndOfBuffer ctermbg=NONE guibg=NONE\n      \bcmd\bvim\nsetup\rnightfox\frequire\3€€À™\4\0", "config", "nightfox.nvim")
+time([[Config for nightfox.nvim]], false)
 -- Config for: nvim-treesitter
 time([[Config for nvim-treesitter]], true)
 try_loadstring("\27LJ\2\nº\1\0\0\4\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\2B\0\2\1K\0\1\0\vindent\1\0\1\venable\2\14highlight\1\0\1\venable\2\19ignore_install\1\2\0\0\vphpdoc\1\0\1\21ensure_installed\ball\nsetup\28nvim-treesitter.configs\frequire\0", "config", "nvim-treesitter")

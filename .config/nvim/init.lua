@@ -118,19 +118,3 @@ vim.api.nvim_set_keymap('n', 'k', 'gk', { noremap = true })
 -- pair
 --------------------------------------------------------------------------------
 vim.o.showmatch = true
-
---------------------------------------------------------------------------------
--- color
---------------------------------------------------------------------------------
-vim.cmd('colorscheme kanagawa')
-vim.cmd('highlight Pmenu      ctermbg=8  guibg=#808080')
-vim.cmd('highlight PmenuSel   ctermbg=12 guibg=#8080ff')
-vim.cmd('highlight PmenuSbar  ctermbg=0  guibg=#000000')
--- 背景透過のため
-vim.cmd('highlight Normal ctermbg=NONE guibg=NONE')
-vim.cmd('highlight NonText ctermbg=NONE guibg=NONE')
-vim.cmd('highlight LineNr ctermbg=NONE guibg=NONE')
-vim.cmd('highlight Folded ctermbg=NONE guibg=NONE')
-vim.cmd('highlight EndOfBuffer ctermbg=NONE guibg=NONE')
--- スペースの可視化
-vim.cmd('highlight ZenkakuSpace ctermbg=6')
