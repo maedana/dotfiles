@@ -13,12 +13,8 @@ require("packer").startup(function()
     config = function() require('nvim-treesitter.configs').setup({
       ensure_installed = 'all',
       ignore_install = { 'phpdoc' },
-      highlight = {
-        enable = true,
-      },
-      indent = {
-        enable = true,
-      },
+      highlight = { enable = true },
+      indent = { enable = true },
     })
     end,
   }
