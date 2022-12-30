@@ -134,4 +134,3 @@ vim.cmd('highlight Folded ctermbg=NONE guibg=NONE')
 vim.cmd('highlight EndOfBuffer ctermbg=NONE guibg=NONE')
 -- スペースの可視化
 vim.cmd('highlight ZenkakuSpace ctermbg=6')
---vim.cmd('match ZenkakuSpace /\s\+$\|　/')

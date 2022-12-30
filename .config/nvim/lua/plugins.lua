@@ -23,12 +23,17 @@ require("packer").startup(function()
     end,
   }
 
-  -- autocomplete
-  -- cod
+  -- statusline系
+  -- nvim-lualine/lualine.nvim を試したい
+
+  -- LSP(及びautocomplete)
+  use { 'neoclide/coc.nvim', branch='release' }
 
   -- ale
+  use 'dense-analysis/ale'
 
   -- 何かfizzy finder系を試す。従来はfzf使ってた
+  -- https://github.com/nvim-telescope/telescope-file-browser.nvim を試したい
 
   -- coffee-script排除できたら不要
   use 'kchmck/vim-coffee-script'

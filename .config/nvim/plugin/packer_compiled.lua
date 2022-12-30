@@ -74,6 +74,16 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ale = {
+    loaded = true,
+    path = "/home/maedana/.local/share/nvim/site/pack/packer/start/ale",
+    url = "https://github.com/dense-analysis/ale"
+  },
+  ["coc.nvim"] = {
+    loaded = true,
+    path = "/home/maedana/.local/share/nvim/site/pack/packer/start/coc.nvim",
+    url = "https://github.com/neoclide/coc.nvim"
+  },
   ["commentout.vim"] = {
     loaded = true,
     path = "/home/maedana/.local/share/nvim/site/pack/packer/start/commentout.vim",
