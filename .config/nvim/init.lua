@@ -64,9 +64,6 @@ vim.o.incsearch = true
 --------------------------------------------------------------------------------
 -- ステータスライン常に表示。画面分割してもステータスラインは1つ
 vim.o.laststatus = 3
--- ステータスラインに文字コードと改行コードを表示させる
--- TODO: 以下動かない。デバッグしたくもないし何かナウでヤングなステータス系プラグイン入れたい
--- vim.o.statusline = '%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P'
 -- コマンドライン補完を拡張モードにする
 vim.o.wildmenu = true
 vim.o.wildmode = 'list:longest,full'
@@ -87,7 +84,6 @@ vim.o.fileencoding = 'utf-8'
 vim.o.foldmethod = 'indent'
 vim.o.foldlevelstart = 20
 vim.o.foldlevel = 20
--- via http://d.hatena.ne.jp/ns9tks/20080318/1205851539
 -- 行頭で h を押すと折畳を閉じる。
 vim.api.nvim_set_keymap('n', 'h', "col('.') == 1 && foldlevel(line('.')) > 0 ? 'zc' : 'h'", { expr = true, noremap = true, silent = true })
 -- 折畳上で l を押すと折畳を開く。
