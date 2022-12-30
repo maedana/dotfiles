@@ -46,10 +46,22 @@ require("packer").startup(function()
   -- LSP(及びautocomplete)
   use { 'neoclide/coc.nvim', branch='release' }
 
-  -- ale
+  -- linter
   use 'dense-analysis/ale'
 
-  -- 何かfizzy finder系を試す。従来はfzf使ってた
+  -- finder
+  use {
+    'nvim-telescope/telescope.nvim', branch = '0.1.x',
+    module = { "telescope" },
+    requires = { {'nvim-lua/plenary.nvim'} },
+    setup = function()
+      local builtin = require('telescope.builtin')
+      vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+      vim.keymap.set('n', '<leader>fl', builtin.live_grep, {})
+      vim.keymap.set('n', '<leader>fg', builtin.grep_string, {})
+      vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+    end,
+  }
   -- https://github.com/nvim-telescope/telescope-file-browser.nvim を試したい
 
   -- coffee-script排除できたら不要

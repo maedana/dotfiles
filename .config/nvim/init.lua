@@ -29,6 +29,8 @@ vim.opt.clipboard:append({ 'unnamedplus' })
 -- Tabの可視化
 vim.o.list = true
 vim.o.listchars = 'tab:»-'
+-- <Leader>をSpaceに
+vim.g.mapleader = ' '
 
 -- grep設定
 -- rgがあれば使う
