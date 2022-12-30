@@ -19,8 +19,16 @@ require("packer").startup(function()
     end,
   }
 
-  -- statusline系
-  -- nvim-lualine/lualine.nvim を試したい
+  -- statusline
+  use {
+    'nvim-lualine/lualine.nvim',
+    config = function() require('lualine').setup({
+      options = {
+        globalstatus = true,
+      }
+    })
+    end,
+  }
 
   -- LSP(及びautocomplete)
   use { 'neoclide/coc.nvim', branch='release' }
