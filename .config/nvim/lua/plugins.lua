@@ -62,7 +62,12 @@ require("packer").startup(function()
       vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
     end,
   }
-  -- https://github.com/nvim-telescope/telescope-file-browser.nvim を試したい
+
+  -- ファイル内のoutlineを表示
+  use {
+    'stevearc/aerial.nvim',
+    config = function() require('aerial').setup() end
+  }
 
   -- coffee-script排除できたら不要
   use 'kchmck/vim-coffee-script'

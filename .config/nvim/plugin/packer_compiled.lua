@@ -74,6 +74,12 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["aerial.nvim"] = {
+    config = { "\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vaerial\frequire\0" },
+    loaded = true,
+    path = "/home/maedana/.local/share/nvim/site/pack/packer/start/aerial.nvim",
+    url = "https://github.com/stevearc/aerial.nvim"
+  },
   ale = {
     loaded = true,
     path = "/home/maedana/.local/share/nvim/site/pack/packer/start/ale",
@@ -174,10 +180,6 @@ end
 time([[Setup for telescope.nvim]], true)
 try_loadstring("\27LJ\2\n—\2\0\0\a\0\14\0$6\0\0\0'\2\1\0B\0\2\0026\1\2\0009\1\3\0019\1\4\1'\3\5\0'\4\6\0009\5\a\0004\6\0\0B\1\5\0016\1\2\0009\1\3\0019\1\4\1'\3\5\0'\4\b\0009\5\t\0004\6\0\0B\1\5\0016\1\2\0009\1\3\0019\1\4\1'\3\5\0'\4\n\0009\5\v\0004\6\0\0B\1\5\0016\1\2\0009\1\3\0019\1\4\1'\3\5\0'\4\f\0009\5\r\0004\6\0\0B\1\5\1K\0\1\0\fbuffers\15<leader>fb\16grep_string\15<leader>fg\14live_grep\15<leader>fl\15find_files\15<leader>ff\6n\bset\vkeymap\bvim\22telescope.builtin\frequire\0", "setup", "telescope.nvim")
 time([[Setup for telescope.nvim]], false)
--- Config for: nightfox.nvim
-time([[Config for nightfox.nvim]], true)
-try_loadstring("\27LJ\2\nû\2\0\0\6\0\6\1\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\3\0006\3\3\0009\3\4\3'\5\5\0B\3\2\0?\3\0\0B\0\2\1K\0\1\0¢\2        colorscheme nordfox\n        highlight Normal ctermbg=NONE guibg=NONE\n        highlight NonText ctermbg=NONE guibg=NONE\n        highlight LineNr ctermbg=NONE guibg=NONE\n        highlight Folded ctermbg=NONE guibg=NONE\n        highlight EndOfBuffer ctermbg=NONE guibg=NONE\n      \bcmd\bvim\nsetup\rnightfox\frequire\3€€À™\4\0", "config", "nightfox.nvim")
-time([[Config for nightfox.nvim]], false)
 -- Config for: nvim-treesitter
 time([[Config for nvim-treesitter]], true)
 try_loadstring("\27LJ\2\nº\1\0\0\4\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\2B\0\2\1K\0\1\0\vindent\1\0\1\venable\2\14highlight\1\0\1\venable\2\19ignore_install\1\2\0\0\vphpdoc\1\0\1\21ensure_installed\ball\nsetup\28nvim-treesitter.configs\frequire\0", "config", "nvim-treesitter")
@@ -186,6 +188,14 @@ time([[Config for nvim-treesitter]], false)
 time([[Config for lualine.nvim]], true)
 try_loadstring("\27LJ\2\n]\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\foptions\1\0\0\1\0\1\17globalstatus\2\nsetup\flualine\frequire\0", "config", "lualine.nvim")
 time([[Config for lualine.nvim]], false)
+-- Config for: aerial.nvim
+time([[Config for aerial.nvim]], true)
+try_loadstring("\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vaerial\frequire\0", "config", "aerial.nvim")
+time([[Config for aerial.nvim]], false)
+-- Config for: nightfox.nvim
+time([[Config for nightfox.nvim]], true)
+try_loadstring("\27LJ\2\nû\2\0\0\6\0\6\1\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\3\0006\3\3\0009\3\4\3'\5\5\0B\3\2\0?\3\0\0B\0\2\1K\0\1\0¢\2        colorscheme nordfox\n        highlight Normal ctermbg=NONE guibg=NONE\n        highlight NonText ctermbg=NONE guibg=NONE\n        highlight LineNr ctermbg=NONE guibg=NONE\n        highlight Folded ctermbg=NONE guibg=NONE\n        highlight EndOfBuffer ctermbg=NONE guibg=NONE\n      \bcmd\bvim\nsetup\rnightfox\frequire\3€€À™\4\0", "config", "nightfox.nvim")
+time([[Config for nightfox.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
