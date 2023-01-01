@@ -85,6 +85,10 @@ require("packer").startup(function()
     end,
   }
 
+  -- quickfix
+  -- quickfixを普通に編集出来る。todoの消し込みとかで便利
+  use 'itchyny/vim-qfedit'
+
   -- ファイル内のoutlineを表示
   use 'stevearc/aerial.nvim'
 
