@@ -84,6 +84,7 @@ require("packer").startup(function()
       vim.api.nvim_set_keymap('o', 'au', ':<c-u>lua require"treesitter-unit".select(true)<CR>', {noremap=true})
     end,
   }
+  use 'machakann/vim-sandwich'
 
   -- quickfix
   -- quickfixを普通に編集出来る。todoの消し込みとかで便利
@@ -100,6 +101,6 @@ require("packer").startup(function()
   use 'sakuraiyuta/commentout.vim'
   -- 一括置換
   use 'thinca/vim-qfreplace'
-  -- Git
+  -- Git( Git blameのみたまに使う)
   use 'tpope/vim-fugitive'
 end)
