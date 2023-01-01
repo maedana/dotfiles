@@ -47,7 +47,18 @@ require("packer").startup(function()
   use { 'neoclide/coc.nvim', branch='release' }
 
   -- linter
-  use 'dense-analysis/ale'
+  use {
+    'dense-analysis/ale',
+    config = function()
+      vim.g.ale_fixers = {
+        javascript = 'eslint',
+        typesciprt = 'eslint'
+      }
+      vim.g.ale_linter_aliases = {
+        vue = { 'javascript', 'html' }
+      }
+    end,
+  }
 
   -- finder
   use {
