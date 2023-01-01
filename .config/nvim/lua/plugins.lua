@@ -74,11 +74,19 @@ require("packer").startup(function()
     end,
   }
 
-  -- ファイル内のoutlineを表示
+  -- text_object
   use {
-    'stevearc/aerial.nvim',
-    config = function() require('aerial').setup() end
+    'David-Kunz/treesitter-unit',
+    config = function()
+      vim.api.nvim_set_keymap('x', 'iu', ':lua require"treesitter-unit".select()<CR>', {noremap=true})
+      vim.api.nvim_set_keymap('x', 'au', ':lua require"treesitter-unit".select(true)<CR>', {noremap=true})
+      vim.api.nvim_set_keymap('o', 'iu', ':<c-u>lua require"treesitter-unit".select()<CR>', {noremap=true})
+      vim.api.nvim_set_keymap('o', 'au', ':<c-u>lua require"treesitter-unit".select(true)<CR>', {noremap=true})
+    end,
   }
+
+  -- ファイル内のoutlineを表示
+  use 'stevearc/aerial.nvim'
 
   -- coffee-script排除できたら不要
   use 'kchmck/vim-coffee-script'
