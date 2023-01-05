@@ -4,6 +4,7 @@ require("packer").startup(function()
   use {
     'EdenEast/nightfox.nvim',
     config = function() require('nightfox').setup({
+      -- highlightはターミナル背景透過設定有効時のため
       vim.cmd([[
         colorscheme nordfox
         highlight Normal ctermbg=NONE guibg=NONE

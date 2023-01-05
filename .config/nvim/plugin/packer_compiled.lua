@@ -80,7 +80,7 @@ _G.packer_plugins = {
     url = "https://github.com/stevearc/aerial.nvim"
   },
   ale = {
-    config = { "\27LJ\2\n™\1\0\0\3\0\b\0\v6\0\0\0009\0\1\0005\1\3\0=\1\2\0006\0\0\0009\0\1\0005\1\6\0005\2\5\0=\2\a\1=\1\4\0K\0\1\0\bvue\1\0\0\1\3\0\0\15javascript\thtml\23ale_linter_aliases\1\0\2\15typesciprt\veslint\15javascript\veslint\15ale_fixers\6g\bvim\0" },
+    config = { "\27LJ\2\n™\1\0\0\3\0\b\0\v6\0\0\0009\0\1\0005\1\3\0=\1\2\0006\0\0\0009\0\1\0005\1\6\0005\2\5\0=\2\a\1=\1\4\0K\0\1\0\bvue\1\0\0\1\3\0\0\15javascript\thtml\23ale_linter_aliases\1\0\2\15javascript\veslint\15typesciprt\veslint\15ale_fixers\6g\bvim\0" },
     loaded = true,
     path = "/home/maedana/.local/share/nvim/site/pack/packer/start/ale",
     url = "https://github.com/dense-analysis/ale"
@@ -196,26 +196,26 @@ end
 time([[Setup for telescope.nvim]], true)
 try_loadstring("\27LJ\2\n—\2\0\0\a\0\14\0$6\0\0\0'\2\1\0B\0\2\0026\1\2\0009\1\3\0019\1\4\1'\3\5\0'\4\6\0009\5\a\0004\6\0\0B\1\5\0016\1\2\0009\1\3\0019\1\4\1'\3\5\0'\4\b\0009\5\t\0004\6\0\0B\1\5\0016\1\2\0009\1\3\0019\1\4\1'\3\5\0'\4\n\0009\5\v\0004\6\0\0B\1\5\0016\1\2\0009\1\3\0019\1\4\1'\3\5\0'\4\f\0009\5\r\0004\6\0\0B\1\5\1K\0\1\0\fbuffers\15<leader>fb\16grep_string\15<leader>fg\14live_grep\15<leader>fl\15find_files\15<leader>ff\6n\bset\vkeymap\bvim\22telescope.builtin\frequire\0", "setup", "telescope.nvim")
 time([[Setup for telescope.nvim]], false)
--- Config for: ale
-time([[Config for ale]], true)
-try_loadstring("\27LJ\2\n™\1\0\0\3\0\b\0\v6\0\0\0009\0\1\0005\1\3\0=\1\2\0006\0\0\0009\0\1\0005\1\6\0005\2\5\0=\2\a\1=\1\4\0K\0\1\0\bvue\1\0\0\1\3\0\0\15javascript\thtml\23ale_linter_aliases\1\0\2\15typesciprt\veslint\15javascript\veslint\15ale_fixers\6g\bvim\0", "config", "ale")
-time([[Config for ale]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-try_loadstring("\27LJ\2\n]\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\foptions\1\0\0\1\0\1\17globalstatus\2\nsetup\flualine\frequire\0", "config", "lualine.nvim")
-time([[Config for lualine.nvim]], false)
 -- Config for: nvim-treesitter
 time([[Config for nvim-treesitter]], true)
 try_loadstring("\27LJ\2\nº\1\0\0\4\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\2B\0\2\1K\0\1\0\vindent\1\0\1\venable\2\14highlight\1\0\1\venable\2\19ignore_install\1\2\0\0\vphpdoc\1\0\1\21ensure_installed\ball\nsetup\28nvim-treesitter.configs\frequire\0", "config", "nvim-treesitter")
 time([[Config for nvim-treesitter]], false)
--- Config for: nightfox.nvim
-time([[Config for nightfox.nvim]], true)
-try_loadstring("\27LJ\2\nû\2\0\0\6\0\6\1\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\3\0006\3\3\0009\3\4\3'\5\5\0B\3\2\0?\3\0\0B\0\2\1K\0\1\0¢\2        colorscheme nordfox\n        highlight Normal ctermbg=NONE guibg=NONE\n        highlight NonText ctermbg=NONE guibg=NONE\n        highlight LineNr ctermbg=NONE guibg=NONE\n        highlight Folded ctermbg=NONE guibg=NONE\n        highlight EndOfBuffer ctermbg=NONE guibg=NONE\n      \bcmd\bvim\nsetup\rnightfox\frequire\3€€À™\4\0", "config", "nightfox.nvim")
-time([[Config for nightfox.nvim]], false)
 -- Config for: treesitter-unit
 time([[Config for treesitter-unit]], true)
 try_loadstring("\27LJ\2\n›\3\0\0\6\0\15\0!6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0005\5\6\0B\0\5\0016\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\a\0'\4\b\0005\5\t\0B\0\5\0016\0\0\0009\0\1\0009\0\2\0'\2\n\0'\3\4\0'\4\v\0005\5\f\0B\0\5\0016\0\0\0009\0\1\0009\0\2\0'\2\n\0'\3\a\0'\4\r\0005\5\14\0B\0\5\1K\0\1\0\1\0\1\fnoremap\0028:<c-u>lua require\"treesitter-unit\".select(true)<CR>\1\0\1\fnoremap\0024:<c-u>lua require\"treesitter-unit\".select()<CR>\6o\1\0\1\fnoremap\0023:lua require\"treesitter-unit\".select(true)<CR>\aau\1\0\1\fnoremap\2/:lua require\"treesitter-unit\".select()<CR>\aiu\6x\20nvim_set_keymap\bapi\bvim\0", "config", "treesitter-unit")
 time([[Config for treesitter-unit]], false)
+-- Config for: nightfox.nvim
+time([[Config for nightfox.nvim]], true)
+try_loadstring("\27LJ\2\nû\2\0\0\6\0\6\1\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\3\0006\3\3\0009\3\4\3'\5\5\0B\3\2\0?\3\0\0B\0\2\1K\0\1\0¢\2        colorscheme nordfox\n        highlight Normal ctermbg=NONE guibg=NONE\n        highlight NonText ctermbg=NONE guibg=NONE\n        highlight LineNr ctermbg=NONE guibg=NONE\n        highlight Folded ctermbg=NONE guibg=NONE\n        highlight EndOfBuffer ctermbg=NONE guibg=NONE\n      \bcmd\bvim\nsetup\rnightfox\frequire\3€€À™\4\0", "config", "nightfox.nvim")
+time([[Config for nightfox.nvim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+try_loadstring("\27LJ\2\n]\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\foptions\1\0\0\1\0\1\17globalstatus\2\nsetup\flualine\frequire\0", "config", "lualine.nvim")
+time([[Config for lualine.nvim]], false)
+-- Config for: ale
+time([[Config for ale]], true)
+try_loadstring("\27LJ\2\n™\1\0\0\3\0\b\0\v6\0\0\0009\0\1\0005\1\3\0=\1\2\0006\0\0\0009\0\1\0005\1\6\0005\2\5\0=\2\a\1=\1\4\0K\0\1\0\bvue\1\0\0\1\3\0\0\15javascript\thtml\23ale_linter_aliases\1\0\2\15javascript\veslint\15typesciprt\veslint\15ale_fixers\6g\bvim\0", "config", "ale")
+time([[Config for ale]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
