@@ -92,7 +92,10 @@ require("packer").startup(function()
   use 'itchyny/vim-qfedit'
 
   -- ファイル内のoutlineを表示
-  use 'stevearc/aerial.nvim'
+  use {
+    'stevearc/aerial.nvim',
+    config = function() require('aerial').setup() end
+  }
 
   -- coffee-script排除できたら不要
   use 'kchmck/vim-coffee-script'
