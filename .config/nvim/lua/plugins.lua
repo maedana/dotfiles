@@ -53,11 +53,13 @@ require("packer").startup(function()
     config = function()
       vim.g.ale_fixers = {
         javascript = 'eslint',
-        typesciprt = 'eslint'
+        typesciprt = 'eslint',
+        ruby = 'rubocop'
       }
       vim.g.ale_linter_aliases = {
         vue = { 'javascript', 'html' }
       }
+      vim.g.ale_ruby_rubocop_executable = 'bundle'
     end,
   }
 
