@@ -1,21 +1,8 @@
 vim.cmd.packadd 'packer.nvim'
 require("packer").startup(function()
   -- color
-  use {
-    'EdenEast/nightfox.nvim',
-    config = function() require('nightfox').setup({
-      -- highlightはターミナル背景透過設定有効時のため
-      vim.cmd([[
-        colorscheme nordfox
-        highlight Normal ctermbg=NONE guibg=NONE
-        highlight NonText ctermbg=NONE guibg=NONE
-        highlight LineNr ctermbg=NONE guibg=NONE
-        highlight Folded ctermbg=NONE guibg=NONE
-        highlight EndOfBuffer ctermbg=NONE guibg=NONE
-      ]])
-    })
-    end,
-  }
+  use 'shaunsingh/nord.nvim'
+  vim.cmd[[colorscheme nord]]
 
   -- syntax
   use {
