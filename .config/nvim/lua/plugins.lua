@@ -1,8 +1,12 @@
 vim.cmd.packadd 'packer.nvim'
 require("packer").startup(function()
   -- color
-  use 'shaunsingh/nord.nvim'
-  vim.cmd[[colorscheme nord]]
+  use({
+    "neanias/everforest-nvim",
+    config = function()
+      require("everforest").setup()
+    end,
+  })
 
   -- syntax
   use {
