@@ -57,7 +57,8 @@ vim.o.magic = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 -- 検索結果の強調表示する
-vim.o.hlsearch = true
+-- https://github.com/neovim/neovim/issues/23590 の現象で遅くなるので検索ハイライト無効化。なくてもそんなに困らないし
+vim.o.hlsearch = false
 -- インクリメンタルサーチする
 vim.o.incsearch = true
 

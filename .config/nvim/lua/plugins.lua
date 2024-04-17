@@ -2,9 +2,13 @@ vim.cmd.packadd 'packer.nvim'
 require("packer").startup(function()
   -- color
   use({
-    "neanias/everforest-nvim",
-    config = function()
-      require("everforest").setup()
+    'EdenEast/nightfox.nvim',
+    config = function() require('nightfox').setup({
+      -- highlightはターミナル背景透過設定有効時のため
+      vim.cmd([[
+        colorscheme nordfox
+      ]])
+    })
     end,
   })
 
