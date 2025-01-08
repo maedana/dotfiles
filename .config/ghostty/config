@@ -46,7 +46,7 @@ keybind = ctrl+t>h=goto_split:left
 keybind = ctrl+t>l=goto_split:right
 keybind = ctrl+t>k=goto_split:top
 keybind = ctrl+t>j=goto_split:bottom
-keybind = ctrl+t>ctrl+t=goto_split:previous
+keybind = ctrl+t>ctrl+t=previous_tab
 keybind = ctrl+t>s=new_split:down
 keybind = ctrl+t>v=new_split:right
 keybind = ctrl+t>z=toggle_split_zoom
