@@ -47,8 +47,8 @@ require("packer").startup(function()
     'dense-analysis/ale',
     config = function()
       vim.g.ale_fixers = {
-        javascript = 'eslint',
-        typesciprt = 'eslint',
+        javascript = { 'eslint', 'biome' },
+        typesciprt = { 'eslint', 'biome' },
         ruby = 'rubocop'
       }
       vim.g.ale_linter_aliases = {
