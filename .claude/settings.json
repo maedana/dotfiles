@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(notify-send:*)",
+      "Bash(git:*)",
+      "Read(~/src/**)",
+      "Edit(~/src/**)"
+    ],
+    "deny": [
+    ]
+  },
+  "includeCoAuthoredBy": false
+}
