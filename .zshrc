@@ -58,12 +58,11 @@ eval "$(rbenv init -)"
 export PATH=$HOME/.nodenv/bin:$PATH
 eval "$(nodenv init -)"
 
+# for mise
+eval "$(mise activate zsh)"
+
 # for yarn
 export PATH="$PATH:`yarn global bin`"
-
-# for topydo
-alias t="topydo"
-alias tx="t ls -x"
 
 # vimで使いたいだけなので
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
