@@ -1,4 +1,5 @@
 {
+  "includeCoAuthoredBy": false,
   "permissions": {
     "allow": [
       "Bash(notify-send:*)",
@@ -39,8 +40,31 @@
       "Bash(ssh:*)",
       "Bash(scp:*)",
       "Bash(rsync:*)",
-      "Bash(systemctl:*)",
+      "Bash(systemctl:*)"
     ]
   },
-  "includeCoAuthoredBy": false
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "notify-send claudeのNotificationがあるよ -u critical"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "notify-send Claudeがタスクを完了したよ -u critical"
+          }
+        ]
+      }
+    ]
+  }
 }
