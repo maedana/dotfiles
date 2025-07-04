@@ -50,7 +50,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "notify-send claudeのNotificationがあるよ -u critical"
+            "command": "notify-send Claudeが許可を求めているかも? -u critical"
           }
         ]
       }
