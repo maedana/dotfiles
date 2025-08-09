@@ -3,7 +3,7 @@
 
 require 'json'
 
-title = "[CC] 完了"
+title = "[CC] 要確認"
 content = "詳細"
 
 curl_command = [
