@@ -16,7 +16,6 @@
     "deny": [
       "Bash(sudo:*)",
       "Bash(git push:*)",
-      "Bash(git commit:*)",
       "Bash(git reset:*)",
       "Bash(git rebase:*)",
       "Bash(git config:*)",
@@ -43,6 +42,7 @@
       "Bash(systemctl:*)"
     ]
   },
+  "model": "sonnet",
   "hooks": {
     "Notification": [
       {
@@ -66,5 +66,8 @@
         ]
       }
     ]
+  },
+  "feedbackSurveyState": {
+    "lastShownTime": 1754374065544
   }
 }
