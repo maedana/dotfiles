@@ -13,10 +13,10 @@ begin
   else
     title = "[CC] 要確認"
   end
-  content = data['message'] || "詳細"
+  content = ""
 rescue JSON::ParserError
   title = "[CC] 要確認"
-  content = "詳細"
+  content = ""
 end
 
 curl_command = [
