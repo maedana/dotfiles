@@ -19,10 +19,8 @@ begin
            end
   
   title = project_name.empty? ? "[CC] #{suffix}" : "[CC] #{project_name} #{suffix}"
-  content = ""
 rescue JSON::ParserError
   title = "[CC] エラー"
-  content = ""
 end
 
 curl_command = [
@@ -31,11 +29,11 @@ curl_command = [
   '-d', JSON.generate({
     topic: {
       title:,
-      content:,
+      content: title, # 空では飛ばないので
     },
   }),
   'https://push-notifier.sg-apps.com/api/v1/groups/maedana/topics'
 ]
 
 system(*curl_command)
-system('notify-send', title, content, '-u', 'critical')
+system('notify-send', title, '-u', 'critical')
