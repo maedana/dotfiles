@@ -36,4 +36,9 @@ curl_command = [
 ]
 
 system(*curl_command)
-system('notify-send', title, '-u', 'critical')
+
+# notify-sendオプション説明:
+# -u normal: 緊急度を通常に設定（criticalだと通知が画面に残り続ける）
+# -t 5000:   5秒で自動消去（ミリ秒単位）
+# -e:        一時的通知（サーバーの永続化機能をバイパス）
+system('notify-send', title, '-u', 'normal', '-t', '5000', '-e')
