@@ -50,7 +50,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "notify-send Claudeが許可を求めているかも? -u critical"
+            "command": "ccask"
           }
         ]
       }
@@ -61,7 +61,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "notify-send Claudeがタスクを完了したよ -u critical"
+            "command": "ccdone"
           }
         ]
       }
