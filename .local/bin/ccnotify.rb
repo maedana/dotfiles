@@ -3,19 +3,25 @@
 
 require 'json'
 
-# 標準入力からJSONを読み取ってパース
+# 標準入力を読み取る
 stdin_content = STDIN.read
+
+# JSONを解析してプロジェクト名を取得
 begin
   data = JSON.parse(stdin_content)
-  if data['cwd']
-    project_name = File.basename(data['cwd'])
-    title = "[CC] #{project_name} 要確認"
-  else
-    title = "[CC] 要確認"
-  end
+  project_name = data['cwd'] ? File.basename(data['cwd']) : ""
+  
+  # hook_event_nameによるサフィックス決定
+  suffix = case data['hook_event_name']
+           when 'Stop' then '完了'
+           when 'Notification' then '要確認'
+           else '通知'
+           end
+  
+  title = project_name.empty? ? "[CC] #{suffix}" : "[CC] #{project_name} #{suffix}"
   content = ""
 rescue JSON::ParserError
-  title = "[CC] 要確認"
+  title = "[CC] エラー"
   content = ""
 end
 
