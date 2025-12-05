@@ -42,7 +42,6 @@
       "Bash(systemctl:*)"
     ]
   },
-  "model": "sonnet",
   "hooks": {
     "Notification": [
       {
@@ -67,6 +66,7 @@
       }
     ]
   },
+  "alwaysThinkingEnabled": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754374065544
   }
