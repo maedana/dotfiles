@@ -47,6 +47,10 @@ compinit
 alias ls='ls --color=auto'
 setopt complete_aliases # aliased ls needs if file/dir completions work
 
+# npx使用不可に。(pnpxを代わりに使う)
+alias npx="echo \"don't use npx\""
+
+# ghqを便利に
 function gcd () {
   cd $(ghq list -p | peco --query "$LBUFFER")
 }
