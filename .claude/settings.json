@@ -74,6 +74,7 @@
   },
   "alwaysThinkingEnabled": true,
   "language": "japanese",
+  "autoUpdatesChannel": "stable",
   "feedbackSurveyState": {
     "lastShownTime": 1754374065544
   }
