@@ -83,5 +83,9 @@
   "autoUpdatesChannel": "stable",
   "feedbackSurveyState": {
     "lastShownTime": 1754374065544
+  },
+  "fileSuggestion": {
+    "type": "command",
+    "command": "ccfilesuggestion"
   }
 }
