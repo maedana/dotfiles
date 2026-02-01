@@ -72,6 +72,7 @@
   "enabledPlugins": {
     "rust-analyzer-lsp@claude-plugins-official": true
   },
+  "model": "opusplan",
   "alwaysThinkingEnabled": true,
   "language": "japanese",
   "autoUpdatesChannel": "stable",
