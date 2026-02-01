@@ -1,5 +1,8 @@
 {
-  "includeCoAuthoredBy": false,
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
   "permissions": {
     "allow": [
       "Bash(notify-send:*)",
@@ -66,11 +69,11 @@
       }
     ]
   },
+  "enabledPlugins": {
+    "rust-analyzer-lsp@claude-plugins-official": true
+  },
   "alwaysThinkingEnabled": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754374065544
-  },
-  "enabledPlugins": {
-    "rust-analyzer-lsp@claude-plugins-official": true
   }
 }
