@@ -35,7 +35,7 @@ vim.g.mapleader = ' '
 -- grep設定
 -- rgがあれば使う
 if vim.fn.executable('rg') then
-  vim.o.grepprg = 'rg --vimgrep'
+  vim.o.grepprg = 'rg --vimgrep --hidden --glob "!.git"'
   vim.o.grepformat = '%f:%l:%c:%m'
 end
 
