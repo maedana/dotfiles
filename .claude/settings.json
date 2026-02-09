@@ -1,4 +1,8 @@
 {
+  "fileSuggestion": {
+    "type": "command",
+    "command": "ccfilesuggestion"
+  },
   "attribution": {
     "commit": "",
     "pr": ""
@@ -45,6 +49,7 @@
       "Bash(systemctl:*)"
     ]
   },
+  "model": "opusplan",
   "hooks": {
     "Notification": [
       {
@@ -69,23 +74,18 @@
       }
     ]
   },
-  "enabledPlugins": {
-    "rust-analyzer-lsp@claude-plugins-official": true
-  },
-  "model": "opusplan",
   "statusLine": {
     "type": "command",
     "command": "ccstatus",
     "padding": 0
   },
-  "alwaysThinkingEnabled": true,
+  "enabledPlugins": {
+    "rust-analyzer-lsp@claude-plugins-official": true
+  },
   "language": "japanese",
-  "autoUpdatesChannel": "stable",
+  "alwaysThinkingEnabled": true,
+  "autoUpdatesChannel": "latest",
   "feedbackSurveyState": {
     "lastShownTime": 1754374065544
-  },
-  "fileSuggestion": {
-    "type": "command",
-    "command": "ccfilesuggestion"
   }
 }
