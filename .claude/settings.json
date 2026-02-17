@@ -49,7 +49,7 @@
       "Bash(systemctl:*)"
     ]
   },
-  "model": "opusplan",
+  "model": "sonnet",
   "hooks": {
     "Notification": [
       {
