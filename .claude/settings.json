@@ -49,7 +49,7 @@
       "Bash(systemctl:*)"
     ]
   },
-  "model": "sonnet",
+  "model": "sonnet[1m]",
   "hooks": {
     "Notification": [
       {
