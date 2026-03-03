@@ -3,6 +3,9 @@
     "type": "command",
     "command": "ccfilesuggestion"
   },
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
   "attribution": {
     "commit": "",
     "pr": ""
@@ -49,7 +52,6 @@
       "Bash(systemctl:*)"
     ]
   },
-  "model": "sonnet[1m]",
   "hooks": {
     "Notification": [
       {
@@ -69,6 +71,17 @@
           {
             "type": "command",
             "command": "ccnotify"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "crmux notify session-start"
           }
         ]
       }
