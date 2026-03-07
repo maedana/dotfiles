@@ -1,6 +1,9 @@
 #!/bin/bash
 input=$(cat)
 
+# Notify crmux of status update (non-blocking)
+echo "$input" | crmux notify status-update &
+
 MODEL=$(echo "$input" | jq -r '.model.display_name')
 CONTEXT_SIZE=$(echo "$input" | jq -r '.context_window.context_window_size')
 USAGE=$(echo "$input" | jq '.context_window.current_usage')
