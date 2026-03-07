@@ -6,3 +6,4 @@
 
 ## 検索
 - grepは使わず必ずrg(ripgrep)を使うこと
+- findは使わず必ずfd(fd-find)を使うこと
