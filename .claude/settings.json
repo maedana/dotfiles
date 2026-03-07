@@ -15,7 +15,7 @@
       "Read(~/src/**)",
       "Edit(~/src/**)",
       "Write(~/src/**)",
-      "Bash(bundle exec rails db\:migrate:*)",
+      "Bash(bundle exec rails db\\:migrate:*)",
       "Bash(bundle exec rspec:*)",
       "Bash(bundle exec rubocop:*)",
       "Bash(bundle install:*)",
@@ -40,7 +40,8 @@
       "Bash(touch:*)",
       "Bash(uniq:*)",
       "Bash(wc:*)",
-      "Bash(which:*)"
+      "Bash(which:*)",
+      "mcp__copy-tuner__get_locales"
     ],
     "deny": [
       "mcp__supabase__execute_sql",
@@ -66,7 +67,7 @@
       "Bash(ssh:*)",
       "Bash(scp:*)",
       "Bash(rsync:*)",
-      "Bash(systemctl:*)",
+      "Bash(systemctl:*)"
     ]
   },
   "hooks": {
