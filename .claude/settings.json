@@ -11,6 +11,9 @@
     "pr": ""
   },
   "permissions": {
+    "additionalDirectories": [
+      "/home/maedana/todotxt"
+    ],
     "allow": [
       "Read(~/src/**)",
       "Edit(~/src/**)",
