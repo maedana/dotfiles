@@ -1,0 +1,13 @@
+#!/bin/bash
+set -euo pipefail
+
+project="${1:?Usage: crmux-plan-search <project>}"
+tmp=$(mktemp)
+trap 'rm -f "$tmp"' EXIT
+
+echo "{\"project\":\"$project\"}" | crmux rpc get-plans | jq -r '.plans[].path' > "$tmp"
+
+fzf --disabled --preview 'cat {}' \
+    --bind "change:reload:rg -l {q} \$(cat $tmp) 2>/dev/null || cat $tmp" \
+    < "$tmp" \
+    | xargs -I{} sh -c 'echo "{\"text\": \"{}\", \"no_execute\": true}" | crmux rpc send-text'
