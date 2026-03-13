@@ -132,8 +132,9 @@
   "language": "japanese",
   "alwaysThinkingEnabled": true,
   "autoUpdatesChannel": "latest",
+  "skipAutoPermissionPrompt": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754374065544
   },
-  "skipAutoPermissionPrompt": true
+  "model": "opus"
 }
