@@ -11,9 +11,6 @@
     "pr": ""
   },
   "permissions": {
-    "additionalDirectories": [
-      "/home/maedana/todotxt"
-    ],
     "allow": [
       "Read(~/src/**)",
       "Edit(~/src/**)",
@@ -44,7 +41,14 @@
       "Bash(uniq:*)",
       "Bash(wc:*)",
       "Bash(which:*)",
-      "mcp__copy-tuner__get_locales"
+      "mcp__copy-tuner__get_locales",
+      "Bash(rails runner:*)",
+      "Bash(bundle exec rails runner:*)",
+      "Bash(ruby -e:*)",
+      "Bash(DEBUG_PARSER=1 bundle exec rspec:*)",
+      "mcp__copy-tuner__search_translations",
+      "mcp__copy-tuner__search_key",
+      "Bash(bin/rails runner:*)"
     ],
     "deny": [
       "mcp__supabase__execute_sql",
@@ -70,7 +74,16 @@
       "Bash(ssh:*)",
       "Bash(scp:*)",
       "Bash(rsync:*)",
-      "Bash(systemctl:*)"
+      "Bash(systemctl:*)",
+      "Read(.env*)",
+      "Read(**/*secret*)",
+      "Read(**/*credentials*)",
+      "Read(**/config/master.key)"
+    ],
+    "ask": [],
+    "defaultMode": "default",
+    "additionalDirectories": [
+      "/home/maedana/todotxt"
     ]
   },
   "hooks": {
