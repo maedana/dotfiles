@@ -73,3 +73,6 @@ export PATH="$PATH:`yarn global bin`"
 
 # starship
 eval "$(starship init zsh)"
+
+# git-wt
+eval "$(git wt --init zsh)"
