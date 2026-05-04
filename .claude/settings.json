@@ -86,6 +86,7 @@
       "/home/maedana/todotxt"
     ]
   },
+  "model": "claude-opus-4-6",
   "hooks": {
     "Notification": [
       {
@@ -135,6 +136,5 @@
   "skipAutoPermissionPrompt": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754374065544
-  },
-  "model": "opus"
+  }
 }
