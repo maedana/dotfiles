@@ -59,8 +59,8 @@ function gcd () {
 eval "$(rbenv init -)"
 
 # for nodenv
-export PATH=$HOME/.nodenv/bin:$PATH
-eval "$(nodenv init -)"
+# export PATH=$HOME/.nodenv/bin:$PATH
+# eval "$(nodenv init -)"
 
 # for mise
 eval "$(mise activate zsh)"
