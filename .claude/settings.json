@@ -132,10 +132,12 @@
   },
   "language": "japanese",
   "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
   "autoUpdatesChannel": "latest",
+  "tui": "fullscreen",
   "skipAutoPermissionPrompt": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754374065544
   },
-  "effortLevel": "high"
+  "autoScrollEnabled": false
 }
