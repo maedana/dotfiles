@@ -1,7 +1,26 @@
 --------------------------------------------------------------------------------
 -- plugins
 --------------------------------------------------------------------------------
-require "plugins"
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git", "clone", "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+vim.g.mapleader = ' '
+
+require("lazy").setup({
+  { import = "plugins" },
+}, {
+  checker = { enabled = false },
+  change_detection = { notify = false },
+  rocks = { enabled = false },
+})
 
 --------------------------------------------------------------------------------
 -- etc
@@ -29,9 +48,6 @@ vim.opt.clipboard:append({ 'unnamedplus' })
 -- Tabの可視化
 vim.o.list = true
 vim.o.listchars = 'tab:»-'
--- <Leader>をSpaceに
-vim.g.mapleader = ' '
-
 -- grep設定
 -- rgがあれば使う
 if vim.fn.executable('rg') then
@@ -75,11 +91,6 @@ vim.o.ruler = true
 -- 入力途中のコマンドを表示
 vim.o.showcmd = true
 
---------------------------------------------------------------------------------
--- encode
---------------------------------------------------------------------------------
-vim.o.encoding = 'utf-8'
-vim.o.fileencoding = 'utf-8'
 
 --------------------------------------------------------------------------------
 -- folding
@@ -99,7 +110,12 @@ vim.api.nvim_set_keymap('v', 'l', "foldclosed(line('.')) != -1 ? 'zogv0' : 'l'",
 --------------------------------------------------------------------------------
 -- autocomplete
 --------------------------------------------------------------------------------
-vim.o.completeopt = 'menuone,noinsert'
+vim.o.completeopt = 'menuone,noselect,popup'
+
+--------------------------------------------------------------------------------
+-- diagnostic
+--------------------------------------------------------------------------------
+vim.diagnostic.config({ virtual_text = true })
 
 --------------------------------------------------------------------------------
 -- buffer
