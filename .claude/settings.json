@@ -86,7 +86,7 @@
       "/home/maedana/todotxt"
     ]
   },
-  "model": "claude-opus-4-6",
+  "model": "claude-opus-4-6[1m]",
   "hooks": {
     "Notification": [
       {
@@ -134,10 +134,10 @@
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
   "autoUpdatesChannel": "latest",
-  "tui": "fullscreen",
+  "tui": "default",
+  "autoScrollEnabled": false,
   "skipAutoPermissionPrompt": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754374065544
-  },
-  "autoScrollEnabled": false
+  }
 }
