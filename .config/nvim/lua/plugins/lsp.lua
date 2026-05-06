@@ -17,6 +17,7 @@ return {
         "vue_ls",
         "gopls",
         "rust_analyzer",
+        "astro",
       },
     },
   },
