@@ -1,7 +1,25 @@
 --------------------------------------------------------------------------------
 -- plugins
 --------------------------------------------------------------------------------
-require "plugins"
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git", "clone", "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+vim.g.mapleader = ' '
+
+require("lazy").setup({
+  { import = "plugins" },
+}, {
+  checker = { enabled = false },
+  change_detection = { notify = false },
+})
 
 --------------------------------------------------------------------------------
 -- etc
@@ -29,9 +47,6 @@ vim.opt.clipboard:append({ 'unnamedplus' })
 -- Tabの可視化
 vim.o.list = true
 vim.o.listchars = 'tab:»-'
--- <Leader>をSpaceに
-vim.g.mapleader = ' '
-
 -- grep設定
 -- rgがあれば使う
 if vim.fn.executable('rg') then
