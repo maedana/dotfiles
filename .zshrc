@@ -47,6 +47,10 @@ compinit
 alias ls='ls --color=auto'
 setopt complete_aliases # aliased ls needs if file/dir completions work
 
+# Claude Code 会社用
+alias claude-work="CLAUDE_CONFIG_DIR=$HOME/.claude-work claude"
+alias crmux-claude-work="crmux claude -e CLAUDE_CONFIG_DIR=$HOME/.claude-work"
+
 # npx使用不可に。(pnpxを代わりに使う)
 alias npx="echo \"don't use npx\""
 

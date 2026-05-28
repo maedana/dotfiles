@@ -86,7 +86,6 @@
       "/home/maedana/todotxt"
     ]
   },
-  "model": "claude-opus-4-6[1m]",
   "hooks": {
     "Notification": [
       {
@@ -128,7 +127,8 @@
     "padding": 0
   },
   "enabledPlugins": {
-    "rust-analyzer-lsp@claude-plugins-official": true
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "security-guidance@claude-plugins-official": true
   },
   "language": "japanese",
   "alwaysThinkingEnabled": true,
