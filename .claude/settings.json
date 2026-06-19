@@ -86,6 +86,7 @@
       "/home/maedana/todotxt"
     ]
   },
+  "model": "claude-opus-4-6[1m]",
   "hooks": {
     "Notification": [
       {
@@ -128,7 +129,16 @@
   },
   "enabledPlugins": {
     "rust-analyzer-lsp@claude-plugins-official": true,
-    "security-guidance@claude-plugins-official": true
+    "security-guidance@claude-plugins-official": true,
+    "install-skills-for-remote@sonicgarden-plugins": true
+  },
+  "extraKnownMarketplaces": {
+    "sonicgarden-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "SonicGarden/claude-plugins"
+      }
+    }
   },
   "language": "japanese",
   "alwaysThinkingEnabled": true,
