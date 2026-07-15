@@ -59,21 +59,11 @@ function gcd () {
   cd $(ghq list -p | peco --query "$LBUFFER")
 }
 
-# for rbenv
-eval "$(rbenv init -)"
-
-# for nodenv
-# export PATH=$HOME/.nodenv/bin:$PATH
-# eval "$(nodenv init -)"
+# for go
+export PATH="$HOME/go/bin:$PATH"
 
 # for mise
 eval "$(mise activate zsh)"
-
-# for yarn
-export PATH="$PATH:`yarn global bin`"
-
-# vimで使いたいだけなので
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # starship
 eval "$(starship init zsh)"
@@ -87,4 +77,3 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-# pnpm end
