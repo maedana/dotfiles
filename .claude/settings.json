@@ -54,8 +54,6 @@
       "Read(.env.*)",
       "Read(id_rsa)",
       "Read(id_ed25519)",
-      "Read(**/*token*)",
-      "Read(**/*key*)",
       "Edit(.env*)",
       "Edit(**/secrets/**)",
       "Bash(sudo:*)",
@@ -80,6 +78,8 @@
       "Read(**/config/master.key)"
     ],
     "ask": [
+      "Read(**/*token*)",
+      "Read(**/*key*)",
       "Bash(gh repo delete:*)",
       "Bash(gh repo edit:*)",
       "Bash(gh repo rename:*)",

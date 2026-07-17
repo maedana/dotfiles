@@ -50,6 +50,7 @@ setopt complete_aliases # aliased ls needs if file/dir completions work
 # Claude Code 会社用
 alias claude-work="CLAUDE_CONFIG_DIR=$HOME/.claude-work claude"
 alias crmux-claude-work="crmux claude -e CLAUDE_CONFIG_DIR=$HOME/.claude-work"
+alias herdr-work="CLAUDE_CONFIG_DIR=$HOME/.claude-work herdr"
 
 # npx使用不可に。(pnpxを代わりに使う)
 alias npx="echo \"don't use npx\""
