@@ -1,16 +1,86 @@
 {
-  "fileSuggestion": {
-    "type": "command",
-    "command": "ccfilesuggestion"
-  },
-  "env": {
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
-  },
+  "alwaysThinkingEnabled": true,
   "attribution": {
     "commit": "",
     "pr": ""
   },
+  "autoScrollEnabled": false,
+  "autoUpdatesChannel": "latest",
+  "effortLevel": "high",
+  "enabledPlugins": {
+    "install-skills-for-remote@sonicgarden-plugins": true,
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "security-guidance@claude-plugins-official": true
+  },
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "extraKnownMarketplaces": {
+    "sonicgarden-plugins": {
+      "source": {
+        "repo": "SonicGarden/claude-plugins",
+        "source": "github"
+      }
+    }
+  },
+  "feedbackSurveyState": {
+    "lastShownTime": 1754374065544
+  },
+  "fileSuggestion": {
+    "command": "ccfilesuggestion",
+    "type": "command"
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "command": "ccnotify",
+            "type": "command"
+          }
+        ],
+        "matcher": ""
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "crmux notify session-start",
+            "type": "command"
+          }
+        ],
+        "matcher": ""
+      },
+      {
+        "hooks": [
+          {
+            "command": "bash '/home/maedana/.claude-work/hooks/herdr-agent-state.sh' session",
+            "timeout": 10,
+            "type": "command"
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "command": "ccnotify",
+            "type": "command"
+          }
+        ],
+        "matcher": ""
+      }
+    ]
+  },
+  "language": "japanese",
+  "model": "claude-opus-4-6[1m]",
   "permissions": {
+    "additionalDirectories": [
+      "/home/maedana/todotxt"
+    ],
     "allow": [
       "Read(~/src/**)",
       "Edit(~/src/**)",
@@ -48,34 +118,6 @@
       "mcp__copy-tuner__search_translations",
       "mcp__copy-tuner__search_key",
       "Bash(bin/rails runner:*)"
-    ],
-    "deny": [
-      "mcp__supabase__execute_sql",
-      "Read(.env.*)",
-      "Read(id_rsa)",
-      "Read(id_ed25519)",
-      "Edit(.env*)",
-      "Edit(**/secrets/**)",
-      "Bash(sudo:*)",
-      "Bash(git push:*)",
-      "Bash(git reset:*)",
-      "Bash(git rebase:*)",
-      "Bash(git config:*)",
-      "Bash(git remote:*)",
-      "Bash(curl:*)",
-      "Bash(wget:*)",
-      "Bash(nc:*)",
-      "Bash(psql:*)",
-      "Bash(mysql:*)",
-      "Bash(mongod:*)",
-      "Bash(ssh:*)",
-      "Bash(scp:*)",
-      "Bash(rsync:*)",
-      "Bash(systemctl:*)",
-      "Read(.env*)",
-      "Read(**/*secret*)",
-      "Read(**/*credentials*)",
-      "Read(**/config/master.key)"
     ],
     "ask": [
       "Read(**/*token*)",
@@ -116,72 +158,40 @@
       "Bash(gh api:*)"
     ],
     "defaultMode": "auto",
-    "additionalDirectories": [
-      "/home/maedana/todotxt"
+    "deny": [
+      "mcp__supabase__execute_sql",
+      "Read(.env.*)",
+      "Read(id_rsa)",
+      "Read(id_ed25519)",
+      "Edit(.env*)",
+      "Edit(**/secrets/**)",
+      "Bash(sudo:*)",
+      "Bash(git push:*)",
+      "Bash(git reset:*)",
+      "Bash(git rebase:*)",
+      "Bash(git config:*)",
+      "Bash(git remote:*)",
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(nc:*)",
+      "Bash(psql:*)",
+      "Bash(mysql:*)",
+      "Bash(mongod:*)",
+      "Bash(ssh:*)",
+      "Bash(scp:*)",
+      "Bash(rsync:*)",
+      "Bash(systemctl:*)",
+      "Read(.env*)",
+      "Read(**/*secret*)",
+      "Read(**/*credentials*)",
+      "Read(**/config/master.key)"
     ]
   },
-  "model": "claude-opus-4-6[1m]",
-  "hooks": {
-    "Notification": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "ccnotify"
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "ccnotify"
-          }
-        ]
-      }
-    ],
-    "SessionStart": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "crmux notify session-start"
-          }
-        ]
-      }
-    ]
-  },
-  "statusLine": {
-    "type": "command",
-    "command": "ccstatus",
-    "padding": 0
-  },
-  "enabledPlugins": {
-    "rust-analyzer-lsp@claude-plugins-official": true,
-    "security-guidance@claude-plugins-official": true,
-    "install-skills-for-remote@sonicgarden-plugins": true
-  },
-  "extraKnownMarketplaces": {
-    "sonicgarden-plugins": {
-      "source": {
-        "source": "github",
-        "repo": "SonicGarden/claude-plugins"
-      }
-    }
-  },
-  "language": "japanese",
-  "alwaysThinkingEnabled": true,
-  "effortLevel": "high",
-  "autoUpdatesChannel": "latest",
-  "tui": "default",
-  "autoScrollEnabled": false,
   "skipAutoPermissionPrompt": true,
-  "feedbackSurveyState": {
-    "lastShownTime": 1754374065544
-  }
+  "statusLine": {
+    "command": "ccstatus",
+    "padding": 0,
+    "type": "command"
+  },
+  "tui": "default"
 }
