@@ -129,6 +129,30 @@ type = "shell"
 command = "herdr plugin pane open --plugin maedana.hint --entrypoint jump"
 description = "hint jump"
 
+[[keys.command]]
+key = "prefix+a"
+type = "shell"
+command = "herdr plugin pane open --plugin maedana.agents-preview --entrypoint dashboard"
+description = "agents preview"
+
+[[keys.command]]
+key = "prefix+o"
+type = "shell"
+command = "herdr plugin action invoke toggle --plugin maedana.agents-status"
+description = "agents status overlay"
+
+[[keys.command]]
+key = "prefix+q"
+type = "shell"
+command = "herdr plugin pane open --plugin maedana.agents-bridge --entrypoint qr"
+description = "agents bridge qr"
+
+[[keys.command]]
+key = "prefix+shift+q"
+type = "shell"
+command = "herdr plugin pane open --plugin maedana.agents-bridge --entrypoint qr-tunnel"
+description = "agents bridge qr (tunnel)"
+
 # Legacy indexed shortcut config is still parsed for compatibility.
 # Prefer switch_tab, switch_workspace, and focus_agent for new configs.
 # [keys.indexed]
