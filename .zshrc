@@ -78,3 +78,9 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+
+# herdr-whereami: update tab name on cd
+_whereami_chpwd() {
+  [[ -n "$HERDR_ENV" ]] && herdr plugin action invoke rename --plugin maedana.whereami &!
+}
+chpwd_functions+=(_whereami_chpwd)
