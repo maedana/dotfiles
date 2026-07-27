@@ -173,13 +173,20 @@
   "enabledPlugins": {
     "install-skills-for-remote@sonicgarden-plugins": true,
     "rust-analyzer-lsp@claude-plugins-official": true,
-    "security-guidance@claude-plugins-official": true
+    "security-guidance@claude-plugins-official": true,
+    "crit@crit": true
   },
   "extraKnownMarketplaces": {
     "sonicgarden-plugins": {
       "source": {
         "source": "github",
         "repo": "SonicGarden/claude-plugins"
+      }
+    },
+    "crit": {
+      "source": {
+        "source": "github",
+        "repo": "tomasz-tomczyk/crit"
       }
     }
   },
