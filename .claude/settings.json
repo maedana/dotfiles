@@ -112,8 +112,7 @@
       "Bash(gh auth login:*)",
       "Bash(gh auth logout:*)",
       "Bash(gh auth refresh:*)",
-      "Bash(gh auth token:*)",
-      "Bash(gh api:*)"
+      "Bash(gh auth token:*)"
     ],
     "defaultMode": "auto",
     "additionalDirectories": [
@@ -199,5 +198,6 @@
   "skipAutoPermissionPrompt": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754374065544
-  }
+  },
+  "agentPushNotifEnabled": true
 }
