@@ -81,6 +81,6 @@ esac
 
 # herdr-whereami: update tab name on cd
 _whereami_chpwd() {
-  [[ -n "$HERDR_ENV" ]] && herdr plugin action invoke rename --plugin maedana.whereami &!
+  [[ -n "$HERDR_ENV" ]] && herdr plugin action invoke rename --plugin maedana.whereami >/dev/null 2>&1 &!
 }
 chpwd_functions+=(_whereami_chpwd)
